@@ -1193,82 +1193,543 @@
     
     <template id="template-launchpad">
         <div class="space-y-8">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold text-white">RWA Launchpad</h1>
-                <p class="mt-2 text-lg text-neutral-300">Participate in early investment opportunities for rigorously vetted, top-tier RWA projects.</p>
+            <!-- Hero Section -->
+            <div class="text-center py-8">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white">RWA Launchpad</h1>
+                        <p class="text-lg text-blue-400 font-medium">Premium Investment Opportunities</p>
+                    </div>
+                </div>
+                <p class="text-lg text-neutral-300 max-w-4xl mx-auto leading-relaxed">Participate in early investment opportunities for rigorously vetted, top-tier RWA projects. Access institutional-grade investments with transparent processes and comprehensive due diligence.</p>
+            </div>
+
+            <!-- Platform Statistics -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="glass-card p-6 rounded-lg border-l-4 border-green-500 shadow-lg hover:shadow-green-500/20 transition-shadow duration-300">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-medium text-neutral-400">Total Raised</h3>
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-white mt-2">$127M</p>
+                    <p class="text-sm text-green-400 mt-1">+23% this month</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg border-l-4 border-blue-500 shadow-lg hover:shadow-blue-500/20 transition-shadow duration-300">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-medium text-neutral-400">Active Projects</h3>
+                        <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-white mt-2">8</p>
+                    <p class="text-sm text-blue-400 mt-1">Live sales</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg border-l-4 border-purple-500 shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-medium text-neutral-400">Participants</h3>
+                        <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-white mt-2">12.4K</p>
+                    <p class="text-sm text-purple-400 mt-1">Verified investors</p>
+                </div>
+                <div class="glass-card p-6 rounded-lg border-l-4 border-yellow-500 shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-medium text-neutral-400">Success Rate</h3>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-white mt-2">94%</p>
+                    <p class="text-sm text-yellow-400 mt-1">Project success</p>
+                </div>
             </div>
 
             <!-- Tiered Staking Model Info -->
-            <div class="glass-card grid grid-cols-1 md:grid-cols-5 gap-0 text-center rounded-lg overflow-hidden">
-                <div class="p-4 border-b md:border-b-0 md:border-r border-neutral-700"><h3 class="font-bold">Bronze</h3><p class="text-sm text-neutral-400">Stake 1,000</p></div>
-                <div class="p-4 border-b md:border-b-0 md:border-r border-neutral-700"><h3 class="font-bold">Silver</h3><p class="text-sm text-neutral-400">Stake 5,000</p></div>
-                <div class="p-4 border-b md:border-b-0 md:border-r border-neutral-700 bg-neutral-800"><h3 class="font-bold text-blue-400">Gold</h3><p class="text-sm text-neutral-400">Stake 20,000</p></div>
-                <div class="p-4 border-b md:border-b-0 md:border-r border-neutral-700"><h3 class="font-bold">Platinum</h3><p class="text-sm text-neutral-400">Stake 100,000</p></div>
-                <div class="p-4"><h3 class="font-bold">Diamond</h3><p class="text-sm text-neutral-400">Stake 500,000</p></div>
+            <div class="glass-card rounded-lg overflow-hidden mb-8">
+                <div class="p-6 border-b border-neutral-700">
+                    <h2 class="text-2xl font-bold text-white mb-2">Tier-Based Allocation System</h2>
+                    <p class="text-neutral-400">Stake COM tokens to unlock higher allocation limits and exclusive access to premium projects</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-0 text-center">
+                    <div class="p-6 border-b md:border-b-0 md:border-r border-neutral-700 hover:bg-neutral-800/50 transition-colors">
+                        <div class="w-12 h-12 bg-gradient-to-r from-amber-600 to-amber-700 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <span class="text-white font-bold">B</span>
+                        </div>
+                        <h3 class="font-bold text-amber-400 mb-1">Bronze</h3>
+                        <p class="text-sm text-neutral-400 mb-2">Stake 1,000 COM</p>
+                        <p class="text-xs text-neutral-500">Max: $1,000</p>
+                    </div>
+                    <div class="p-6 border-b md:border-b-0 md:border-r border-neutral-700 hover:bg-neutral-800/50 transition-colors">
+                        <div class="w-12 h-12 bg-gradient-to-r from-gray-400 to-gray-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <span class="text-white font-bold">S</span>
+                        </div>
+                        <h3 class="font-bold text-gray-400 mb-1">Silver</h3>
+                        <p class="text-sm text-neutral-400 mb-2">Stake 5,000 COM</p>
+                        <p class="text-xs text-neutral-500">Max: $5,000</p>
+                    </div>
+                    <div class="p-6 border-b md:border-b-0 md:border-r border-neutral-700 bg-gradient-to-r from-yellow-900/20 to-yellow-800/20 hover:from-yellow-900/30 hover:to-yellow-800/30 transition-colors">
+                        <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <span class="text-white font-bold">G</span>
+                        </div>
+                        <h3 class="font-bold text-yellow-400 mb-1">Gold</h3>
+                        <p class="text-sm text-neutral-300 mb-2">Stake 20,000 COM</p>
+                        <p class="text-xs text-yellow-400">Max: $25,000</p>
+                        <div class="mt-2 px-2 py-1 bg-yellow-500/20 rounded text-xs text-yellow-300">Your Tier</div>
+                    </div>
+                    <div class="p-6 border-b md:border-b-0 md:border-r border-neutral-700 hover:bg-neutral-800/50 transition-colors">
+                        <div class="w-12 h-12 bg-gradient-to-r from-slate-300 to-slate-400 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <span class="text-black font-bold">P</span>
+                        </div>
+                        <h3 class="font-bold text-slate-300 mb-1">Platinum</h3>
+                        <p class="text-sm text-neutral-400 mb-2">Stake 100,000 COM</p>
+                        <p class="text-xs text-neutral-500">Max: $100,000</p>
+                    </div>
+                    <div class="p-6 hover:bg-neutral-800/50 transition-colors">
+                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            <span class="text-white font-bold">D</span>
+                        </div>
+                        <h3 class="font-bold text-cyan-400 mb-1">Diamond</h3>
+                        <p class="text-sm text-neutral-400 mb-2">Stake 500,000 COM</p>
+                        <p class="text-xs text-neutral-500">Unlimited</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Sales Tabs -->
-            <div class="flex justify-center border-b border-neutral-700">
-                <button class="px-6 py-3 text-white border-b-2 border-blue-500 font-semibold">Ongoing</button>
-                <button class="px-6 py-3 text-neutral-400 hover:text-white">Upcoming</button>
-                <button class="px-6 py-3 text-neutral-400 hover:text-white">Completed</button>
+            <div class="flex justify-center border-b border-neutral-700 mb-8">
+                <button class="px-8 py-3 text-white border-b-2 border-blue-500 font-semibold transition-colors" onclick="switchLaunchpadTab('ongoing')">Ongoing (3)</button>
+                <button class="px-8 py-3 text-neutral-400 hover:text-white transition-colors" onclick="switchLaunchpadTab('upcoming')">Upcoming (5)</button>
+                <button class="px-8 py-3 text-neutral-400 hover:text-white transition-colors" onclick="switchLaunchpadTab('completed')">Completed (12)</button>
+                <button class="px-8 py-3 text-neutral-400 hover:text-white transition-colors" onclick="switchLaunchpadTab('whitelist')">Whitelist (2)</button>
             </div>
 
-            <!-- Project Sale Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1: Active Sale -->
-                <div class="glass-card rounded-lg overflow-hidden flex flex-col">
+            <!-- Ongoing Projects Tab -->
+            <div id="ongoing-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Active Sale - High Progress -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-3">
                                 <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/166534/ffffff?text=A" alt="ACME Capital">
                                 <div>
                                     <h3 class="text-xl font-bold text-white">ACME Real Estate Fund</h3>
-                                    <p class="text-sm text-neutral-400">ACME</p>
+                                    <p class="text-sm text-neutral-400">ACME • Real Estate</p>
                                 </div>
                             </div>
-                            <span class="tag tag-green">Ongoing</span>
+                            <span class="tag tag-green animate-pulse">Live</span>
                         </div>
-                        <div class="space-y-2 text-sm">
+                        <div class="space-y-2 text-sm mb-4">
                             <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-white font-medium">$5,000,000 USDC</span></div>
                             <div class="flex justify-between"><span class="text-neutral-400">Token Price</span><span class="text-white font-medium">$1.00</span></div>
-                            <div class="flex justify-between"><span class="text-neutral-400">Min. Participation</span><span class="text-white font-medium">$500</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Min. Investment</span><span class="text-white font-medium">$500</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Ends In</span><span class="text-red-400 font-medium">2d 14h 32m</span></div>
                         </div>
                     </div>
                     <div class="px-6 pb-6 mt-auto">
-                        <div class="w-full bg-neutral-700 rounded-full h-2.5 mb-2">
-                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full relative" style="width: 87%">
+                                <div class="absolute right-0 top-0 h-3 w-2 bg-green-400 rounded-full animate-pulse"></div>
+                            </div>
                         </div>
                         <div class="flex justify-between text-xs text-neutral-400 mb-4">
-                            <span>Progress: 75%</span>
-                            <span>$3.75M / $5M</span>
+                            <span>Progress: 87%</span>
+                            <span>$4.35M / $5M</span>
                         </div>
-                        <button class="btn btn-primary w-full" onclick="openInvestModal('acme-real-estate')">
-                            Participate
-                            <span class="text-xs font-normal opacity-75">(KYC Required)</span>
+                        <button class="btn btn-primary w-full mb-2" onclick="openInvestModal('acme-real-estate')">
+                            Invest Now
+                            <span class="text-xs font-normal opacity-75 block">KYC Verified ✓</span>
                         </button>
+                        <div class="text-xs text-center text-neutral-500">Your allocation: $2,500 available</div>
                     </div>
                 </div>
-                <!-- Card 2: Upcoming -->
-                <div class="glass-card rounded-lg overflow-hidden flex flex-col opacity-60">
-                     <div class="p-6">
+
+                <!-- Card 2: Active Sale - Medium Progress -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/7c2d12/ffffff?text=G" alt="GreenTech">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">GreenTech Carbon Credits</h3>
+                                    <p class="text-sm text-neutral-400">GTCC • Carbon Credits</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-green animate-pulse">Live</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-white font-medium">$8,000,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Token Price</span><span class="text-white font-medium">$0.75</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Min. Investment</span><span class="text-white font-medium">$1,000</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Ends In</span><span class="text-yellow-400 font-medium">5d 8h 15m</span></div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 42%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-neutral-400 mb-4">
+                            <span>Progress: 42%</span>
+                            <span>$3.36M / $8M</span>
+                        </div>
+                        <button class="btn btn-primary w-full mb-2" onclick="openInvestModal('greentech-carbon')">
+                            Invest Now
+                            <span class="text-xs font-normal opacity-75 block">KYC Verified ✓</span>
+                        </button>
+                        <div class="text-xs text-center text-neutral-500">Your allocation: $25,000 available</div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Active Sale - Early Stage -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/1e40af/ffffff?text=D" alt="DeFi Yield">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">DeFi Yield Protocol</h3>
+                                    <p class="text-sm text-neutral-400">DYP • DeFi Infrastructure</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-green animate-pulse">Live</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-white font-medium">$12,000,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Token Price</span><span class="text-white font-medium">$0.50</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Min. Investment</span><span class="text-white font-medium">$2,000</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Ends In</span><span class="text-green-400 font-medium">12d 6h 45m</span></div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full" style="width: 18%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-neutral-400 mb-4">
+                            <span>Progress: 18%</span>
+                            <span>$2.16M / $12M</span>
+                        </div>
+                        <button class="btn btn-primary w-full mb-2" onclick="openInvestModal('defi-yield')">
+                            Invest Now
+                            <span class="text-xs font-normal opacity-75 block">KYC Verified ✓</span>
+                        </button>
+                        <div class="text-xs text-center text-neutral-500">Your allocation: $25,000 available</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Projects Tab -->
+            <div id="upcoming-projects" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Upcoming Card 1: Whitelist Open -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-3">
                                 <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/7c2d12/ffffff?text=T" alt="TradeFi Credit">
                                 <div>
                                     <h3 class="text-xl font-bold text-white">TradeFi Credit Pool</h3>
-                                    <p class="text-sm text-neutral-400">TFCP</p>
+                                    <p class="text-sm text-neutral-400">TFCP • Trade Finance</p>
                                 </div>
                             </div>
-                            <span class="tag tag-yellow">Upcoming</span>
+                            <span class="tag tag-blue">Whitelist Open</span>
                         </div>
-                        <div class="space-y-2 text-sm">
+                        <div class="space-y-2 text-sm mb-4">
                             <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-white font-medium">$10,000,000 USDC</span></div>
-                            <div class="flex justify-between"><span class="text-neutral-400">Starts</span><span class="text-white font-medium">Jul 15, 14:00 UTC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Token Price</span><span class="text-white font-medium">$0.80</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Sale Starts</span><span class="text-blue-400 font-medium">Jul 15, 14:00 UTC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Whitelist Ends</span><span class="text-yellow-400 font-medium">Jul 12, 23:59 UTC</span></div>
                         </div>
                     </div>
                     <div class="px-6 pb-6 mt-auto">
-                        <button class="btn btn-secondary w-full" disabled>Coming Soon</button>
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 65%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-neutral-400 mb-4">
+                            <span>Whitelist: 65%</span>
+                            <span>3,250 / 5,000 spots</span>
+                        </div>
+                        <button class="btn btn-secondary w-full mb-2" onclick="joinWhitelist('tradefi-credit')">
+                            Join Whitelist
+                            <span class="text-xs font-normal opacity-75 block">Complete tasks to qualify</span>
+                        </button>
+                        <div class="text-xs text-center text-green-400">✓ You're whitelisted!</div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Card 2: Coming Soon -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col opacity-75 hover:opacity-100 hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/059669/ffffff?text=R" alt="RealEstate DAO">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">RealEstate DAO</h3>
+                                    <p class="text-sm text-neutral-400">REDAO • Real Estate</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-yellow">Coming Soon</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-white font-medium">$15,000,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Expected Price</span><span class="text-white font-medium">$1.20</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Launch Date</span><span class="text-yellow-400 font-medium">Aug 1, 2024</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Min. Investment</span><span class="text-white font-medium">$1,500</span></div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <button class="btn btn-secondary w-full mb-2" onclick="setReminder('realestate-dao')">
+                            Set Reminder
+                            <span class="text-xs font-normal opacity-75 block">Get notified when live</span>
+                        </button>
+                        <div class="text-xs text-center text-neutral-500">2,847 users interested</div>
+                    </div>
+                </div>
+
+                <!-- More upcoming projects... -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col opacity-75 hover:opacity-100 hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/7c3aed/ffffff?text=M" alt="MetaVerse Assets">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">MetaVerse Assets</h3>
+                                    <p class="text-sm text-neutral-400">MVA • Virtual Real Estate</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-purple">In Review</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-white font-medium">$6,000,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Expected Price</span><span class="text-white font-medium">$0.60</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Status</span><span class="text-purple-400 font-medium">Due Diligence</span></div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <button class="btn btn-secondary w-full" disabled>
+                            Under Review
+                            <span class="text-xs font-normal opacity-75 block">Pending approval</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Projects Tab -->
+            <div id="completed-projects" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Completed Card 1: Successful -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/059669/ffffff?text=B" alt="BlackRock BUIDL">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">BlackRock BUIDL Fund</h3>
+                                    <p class="text-sm text-neutral-400">BUIDL • Treasury Fund</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-green">Successful</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between"><span class="text-neutral-400">Raised</span><span class="text-green-400 font-medium">$25,000,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Token Price</span><span class="text-white font-medium">$1.00</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">ROI</span><span class="text-green-400 font-medium">+245%</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Completed</span><span class="text-neutral-400">Mar 15, 2024</span></div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full" style="width: 100%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-neutral-400 mb-4">
+                            <span>Target Achieved: 100%</span>
+                            <span>2,156 participants</span>
+                        </div>
+                        <button class="btn btn-success w-full mb-2" onclick="viewProjectDetails('blackrock-buidl')">
+                            View Details
+                            <span class="text-xs font-normal opacity-75 block">Trading on 3 exchanges</span>
+                        </button>
+                        <div class="text-xs text-center text-green-400">Your investment: $5,000 → $17,250</div>
+                    </div>
+                </div>
+
+                <!-- Completed Card 2: Partially Successful -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/ea580c/ffffff?text=S" alt="Solar Energy">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Solar Energy Tokens</h3>
+                                    <p class="text-sm text-neutral-400">SET • Renewable Energy</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-yellow">Partial</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between"><span class="text-neutral-400">Raised</span><span class="text-yellow-400 font-medium">$3,200,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-neutral-400">$5,000,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">ROI</span><span class="text-green-400 font-medium">+89%</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Completed</span><span class="text-neutral-400">Feb 28, 2024</span></div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 h-3 rounded-full" style="width: 64%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-neutral-400 mb-4">
+                            <span>Target Achieved: 64%</span>
+                            <span>1,423 participants</span>
+                        </div>
+                        <button class="btn btn-secondary w-full mb-2" onclick="viewProjectDetails('solar-energy')">
+                            View Details
+                            <span class="text-xs font-normal opacity-75 block">Trading on 2 exchanges</span>
+                        </button>
+                        <div class="text-xs text-center text-green-400">Your investment: $2,000 → $3,780</div>
+                    </div>
+                </div>
+
+                <!-- Completed Card 3: Failed -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col opacity-75 hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/dc2626/ffffff?text=F" alt="Failed Project">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">FinTech Innovation</h3>
+                                    <p class="text-sm text-neutral-400">FTI • Financial Services</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-red">Failed</span>
+                        </div>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between"><span class="text-neutral-400">Raised</span><span class="text-red-400 font-medium">$450,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Target</span><span class="text-neutral-400">$8,000,000 USDC</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Status</span><span class="text-red-400 font-medium">Refunded</span></div>
+                            <div class="flex justify-between"><span class="text-neutral-400">Ended</span><span class="text-neutral-400">Jan 10, 2024</span></div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-red-500 to-red-600 h-3 rounded-full" style="width: 6%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-neutral-400 mb-4">
+                            <span>Target Achieved: 6%</span>
+                            <span>89 participants</span>
+                        </div>
+                        <button class="btn btn-secondary w-full mb-2" onclick="viewProjectDetails('fintech-innovation')">
+                            View Details
+                            <span class="text-xs font-normal opacity-75 block">Full refund processed</span>
+                        </button>
+                        <div class="text-xs text-center text-green-400">Your investment: $1,000 → $1,000 (refunded)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Whitelist Projects Tab -->
+            <div id="whitelist-projects" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Whitelist Card 1: Active Tasks -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/8b5cf6/ffffff?text=N" alt="NFT Marketplace">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">NFT Marketplace Pro</h3>
+                                    <p class="text-sm text-neutral-400">NFTP • NFT Infrastructure</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-purple">Whitelist</span>
+                        </div>
+                        <div class="space-y-3 text-sm mb-4">
+                            <div class="flex items-center justify-between p-2 bg-neutral-800 rounded">
+                                <span class="text-neutral-300">Follow Twitter</span>
+                                <span class="text-green-400">✓</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 bg-neutral-800 rounded">
+                                <span class="text-neutral-300">Join Discord</span>
+                                <span class="text-green-400">✓</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2 bg-neutral-700 rounded">
+                                <span class="text-neutral-300">Retweet Announcement</span>
+                                <button class="text-blue-400 text-xs" onclick="completeTask('retweet')">Complete</button>
+                            </div>
+                            <div class="flex items-center justify-between p-2 bg-neutral-700 rounded">
+                                <span class="text-neutral-300">Invite 3 Friends</span>
+                                <span class="text-yellow-400 text-xs">1/3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <div class="w-full bg-neutral-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-neutral-400 mb-4">
+                            <span>Progress: 75%</span>
+                            <span>3/4 tasks completed</span>
+                        </div>
+                        <button class="btn btn-primary w-full mb-2" onclick="continueWhitelist('nft-marketplace')">
+                            Continue Tasks
+                            <span class="text-xs font-normal opacity-75 block">1 task remaining</span>
+                        </button>
+                        <div class="text-xs text-center text-neutral-500">Whitelist closes in 3 days</div>
+                    </div>
+                </div>
+
+                <!-- Whitelist Card 2: Completed -->
+                <div class="glass-card rounded-lg overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <img class="h-12 w-12 rounded-full" src="https://placehold.co/48x48/059669/ffffff?text=A" alt="AI Trading">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">AI Trading Protocol</h3>
+                                    <p class="text-sm text-neutral-400">AITP • AI & Trading</p>
+                                </div>
+                            </div>
+                            <span class="tag tag-green">Qualified</span>
+                        </div>
+                        <div class="space-y-3 text-sm mb-4">
+                            <div class="flex items-center justify-between p-2 bg-green-900/30 rounded">
+                                <span class="text-green-300">All tasks completed</span>
+                                <span class="text-green-400">✓</span>
+                            </div>
+                            <div class="p-3 bg-gradient-to-r from-green-900/20 to-green-800/20 rounded">
+                                <div class="text-green-400 font-medium mb-1">Whitelist Position: #247</div>
+                                <div class="text-xs text-green-300">Guaranteed allocation: $5,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <div class="w-full bg-green-700 rounded-full h-3 mb-2">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full" style="width: 100%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-green-400 mb-4">
+                            <span>Whitelist: Complete</span>
+                            <span>Sale starts in 2 days</span>
+                        </div>
+                        <button class="btn btn-success w-full mb-2" disabled>
+                            Whitelisted ✓
+                            <span class="text-xs font-normal opacity-75 block">Ready for sale</span>
+                        </button>
+                        <div class="text-xs text-center text-green-400">You'll be notified when sale begins</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Modal Placeholder -->
+            <div class="mt-12 text-center">
+                <div class="glass-card p-8 rounded-lg max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold text-white mb-4">Ready to Start Investing?</h3>
+                    <p class="text-neutral-400 mb-6">Complete your KYC verification to access all investment opportunities and unlock higher tier benefits.</p>
+                    <div class="flex justify-center gap-4">
+                        <button class="btn btn-primary px-8 py-3" onclick="startKYC()">Complete KYC</button>
+                        <button class="btn btn-secondary px-8 py-3" onclick="learnMore()">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -1276,11 +1737,397 @@
     </template>
     
     <template id="template-incubator">
-        <div class="text-center py-16">
-            <h1 class="text-4xl font-bold text-white">Com2000 Incubator</h1>
-            <p class="mt-4 text-lg text-neutral-300 max-w-3xl mx-auto">We are more than a launchpad. We are your strategic partner in the RWA space, providing comprehensive support from technology to compliance.</p>
-            <div class="mt-8">
-                <button class="btn btn-primary btn-lg">Apply for Incubation</button>
+        <div class="space-y-16">
+            <!-- Hero Section -->
+            <div class="text-center py-16">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white">COM2000 Asset Incubator</h1>
+                        <p class="text-lg text-purple-400 font-medium">From Concept to Market Leadership</p>
+                    </div>
+                </div>
+                <p class="text-lg text-neutral-300 max-w-4xl mx-auto leading-relaxed">We are more than a launchpad. We are your strategic partner in the RWA space, providing comprehensive support from technology development to regulatory compliance, market strategy to institutional partnerships.</p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <button class="btn btn-primary px-8 py-3 text-lg" onclick="openModal('incubator-application-modal')">Apply for Incubation</button>
+                    <button class="btn btn-secondary px-8 py-3 text-lg" onclick="scrollToSection('success-cases')">View Success Stories</button>
+                </div>
+            </div>
+
+            <!-- Key Statistics -->
+            <div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-purple-500 shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-sm font-medium text-neutral-400">Projects Incubated</h3>
+                            <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-3xl font-bold text-white mt-2">47</p>
+                        <p class="text-sm text-green-400 mt-1">+12 this quarter</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-blue-500 shadow-lg hover:shadow-blue-500/20 transition-shadow duration-300">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-sm font-medium text-neutral-400">Total AUM Raised</h3>
+                            <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-3xl font-bold text-white mt-2">$2.8B</p>
+                        <p class="text-sm text-green-400 mt-1">+45% YoY growth</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-green-500 shadow-lg hover:shadow-green-500/20 transition-shadow duration-300">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-sm font-medium text-neutral-400">Success Rate</h3>
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-3xl font-bold text-white mt-2">89%</p>
+                        <p class="text-sm text-green-400 mt-1">Market leading</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-yellow-500 shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-sm font-medium text-neutral-400">Average Time to Market</h3>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p class="text-3xl font-bold text-white mt-2">6.2</p>
+                        <p class="text-sm text-neutral-400 mt-1">months</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Incubation Services -->
+            <div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Comprehensive Incubation Services</h2>
+                    <p class="text-lg text-neutral-400 max-w-3xl mx-auto">End-to-end support for RWA projects from ideation to institutional adoption</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Technical Development -->
+                    <div class="glass-card p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Technical Development</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>Smart Contract Architecture</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>Tokenization Framework</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>Cross-chain Integration</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>Security Auditing</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>Oracle Integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Regulatory Compliance -->
+                    <div class="glass-card p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Regulatory Compliance</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>SEC/CFTC Compliance</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>MiFID II Framework</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>KYC/AML Implementation</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>Legal Structure Setup</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>Regulatory Reporting</li>
+                        </ul>
+                    </div>
+
+                    <!-- Market Strategy -->
+                    <div class="glass-card p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Market Strategy</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>Go-to-Market Planning</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>Institutional Partnerships</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>Liquidity Strategy</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>Marketing & PR</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>Community Building</li>
+                        </ul>
+                    </div>
+
+                    <!-- Financial Engineering -->
+                    <div class="glass-card p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
+                        <div class="w-12 h-12 bg-gradient-to-r from-yellow-600 to-yellow-700 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Financial Engineering</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>Asset Valuation Models</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>Risk Management Framework</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>Yield Optimization</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>Capital Structure Design</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>Treasury Management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Institutional Network -->
+                    <div class="glass-card p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
+                        <div class="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Institutional Network</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>Investor Introductions</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>Strategic Partnerships</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>Exchange Listings</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>Custodial Services</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>Market Making</li>
+                        </ul>
+                    </div>
+
+                    <!-- Ongoing Support -->
+                    <div class="glass-card p-8 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
+                        <div class="w-12 h-12 bg-gradient-to-r from-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Ongoing Support</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>24/7 Technical Support</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>Performance Monitoring</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>Regulatory Updates</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>Growth Consulting</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>Alumni Network Access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Incubation Process -->
+            <div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Incubation Process</h2>
+                    <p class="text-lg text-neutral-400 max-w-3xl mx-auto">A structured 6-month journey from concept validation to market launch</p>
+                </div>
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-600 to-blue-600 rounded-full"></div>
+                    
+                    <!-- Phase 1 -->
+                    <div class="relative flex items-center mb-12">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="glass-card p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-white mb-2">Phase 1: Discovery & Validation</h3>
+                                <p class="text-sm text-neutral-400 mb-3">Weeks 1-4</p>
+                                <ul class="text-sm text-neutral-300 space-y-1">
+                                    <li>• Market research & competitive analysis</li>
+                                    <li>• Technical feasibility assessment</li>
+                                    <li>• Regulatory landscape review</li>
+                                    <li>• Business model validation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-purple-600 rounded-full border-4 border-neutral-900 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">1</span>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="relative flex items-center mb-12">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-600 rounded-full border-4 border-neutral-900 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">2</span>
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <div class="glass-card p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-white mb-2">Phase 2: Architecture & Design</h3>
+                                <p class="text-sm text-neutral-400 mb-3">Weeks 5-12</p>
+                                <ul class="text-sm text-neutral-300 space-y-1">
+                                    <li>• Smart contract architecture design</li>
+                                    <li>• Tokenomics modeling</li>
+                                    <li>• Legal structure establishment</li>
+                                    <li>• Technical documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="relative flex items-center mb-12">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="glass-card p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-white mb-2">Phase 3: Development & Testing</h3>
+                                <p class="text-sm text-neutral-400 mb-3">Weeks 13-20</p>
+                                <ul class="text-sm text-neutral-300 space-y-1">
+                                    <li>• Smart contract development</li>
+                                    <li>• Security auditing</li>
+                                    <li>• Testnet deployment</li>
+                                    <li>• Integration testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-green-600 rounded-full border-4 border-neutral-900 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">3</span>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-yellow-600 rounded-full border-4 border-neutral-900 flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">4</span>
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <div class="glass-card p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-white mb-2">Phase 4: Launch & Scale</h3>
+                                <p class="text-sm text-neutral-400 mb-3">Weeks 21-26</p>
+                                <ul class="text-sm text-neutral-300 space-y-1">
+                                    <li>• Mainnet deployment</li>
+                                    <li>• Institutional partnerships</li>
+                                    <li>• Marketing campaign launch</li>
+                                    <li>• Ongoing optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Cases -->
+            <div id="success-cases">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Success Stories</h2>
+                    <p class="text-lg text-neutral-400 max-w-3xl mx-auto">Projects that have successfully graduated from our incubation program</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Success Case 1 -->
+                    <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white font-bold text-lg">BR</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">BlackRock BUIDL</h3>
+                                <p class="text-sm text-neutral-400">Tokenized Treasury Fund</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">AUM Raised:</span>
+                                <span class="text-white font-semibold">$875M</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Time to Market:</span>
+                                <span class="text-green-400">5.2 months</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Current APY:</span>
+                                <span class="text-green-400">5.02%</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-neutral-300">Successfully launched the world's largest tokenized treasury fund with institutional-grade compliance and security.</p>
+                    </div>
+
+                    <!-- Success Case 2 -->
+                    <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white font-bold text-lg">MP</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Maple Finance</h3>
+                                <p class="text-sm text-neutral-400">Institutional Credit Pool</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">AUM Raised:</span>
+                                <span class="text-white font-semibold">$245M</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Time to Market:</span>
+                                <span class="text-green-400">6.8 months</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Current APY:</span>
+                                <span class="text-green-400">8.75%</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-neutral-300">Pioneered institutional-grade credit markets on-chain with advanced risk management and automated lending protocols.</p>
+                    </div>
+
+                    <!-- Success Case 3 -->
+                    <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-yellow-600 to-yellow-700 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-white font-bold text-lg">RT</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">RealT Portfolio</h3>
+                                <p class="text-sm text-neutral-400">Tokenized Real Estate</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">AUM Raised:</span>
+                                <span class="text-white font-semibold">$156M</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Time to Market:</span>
+                                <span class="text-green-400">7.1 months</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Current APY:</span>
+                                <span class="text-green-400">6.25%</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-neutral-300">Revolutionized real estate investment through fractional ownership and automated rental income distribution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application CTA -->
+            <div class="text-center py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-lg">
+                <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your RWA Vision?</h2>
+                <p class="text-lg text-neutral-300 max-w-3xl mx-auto mb-8">Join the next generation of successful RWA projects. Our expert team is ready to guide you from concept to market leadership.</p>
+                <div class="flex justify-center gap-4">
+                    <button class="btn btn-primary px-8 py-3 text-lg" onclick="openModal('incubator-application-modal')">Start Your Application</button>
+                    <button class="btn btn-secondary px-8 py-3 text-lg" onclick="openModal('consultation-modal')">Schedule Consultation</button>
+                </div>
+                <div class="mt-8 flex justify-center items-center space-x-8 text-sm text-neutral-400">
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        No upfront fees
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Success-based model
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Ongoing support
+                    </div>
+                </div>
             </div>
         </div>
     </template>
@@ -1632,9 +2479,16 @@
         function openModal(modalId) {
             document.getElementById(modalId).classList.remove('hidden');
         }
-        
+
         function closeModal(modalId) {
             document.getElementById(modalId).classList.add('hidden');
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
         }
         
         function openInvestModal(projectId) {
