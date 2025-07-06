@@ -94,12 +94,12 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-6">
-                            <a href="#" id="nav-data" class="nav-link" onclick="navigateTo('data')">Institutional Data Hub</a>
-                            <a href="#" id="nav-launchpad" class="nav-link" onclick="navigateTo('launchpad')">Project Launch</a>
-                            <a href="#" id="nav-incubator" class="nav-link" onclick="navigateTo('incubator')">Asset Incubation</a>
-                            <a href="#" id="nav-research" class="nav-link" onclick="navigateTo('research')">Research Reports</a>
+                            <a href="#" id="nav-data" class="nav-link" onclick="navigateTo('data')" data-i18n="nav.data">Institutional Data Hub</a>
+                            <a href="#" id="nav-launchpad" class="nav-link" onclick="navigateTo('launchpad')" data-i18n="nav.launchpad">Project Launch</a>
+                            <a href="#" id="nav-incubator" class="nav-link" onclick="navigateTo('incubator')" data-i18n="nav.incubator">Asset Incubation</a>
+                            <a href="#" id="nav-research" class="nav-link" onclick="navigateTo('research')" data-i18n="nav.research">Research Reports</a>
                             <a href="https://sites.google.com/view/com2000ipo/ipo" target="_blank" class="nav-link flex items-center space-x-1">
-                                <span>IPO Status</span>
+                                <span data-i18n="nav.ipo">IPO Status</span>
                                 <svg class="w-3 h-3 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                 </svg>
@@ -121,8 +121,8 @@
                             <option value="zh">中文</option>
                             <option value="zh-TW">繁體中文</option>
                         </select>
-                        <button id="connect-wallet-btn" class="btn btn-secondary">Institutional Wallet</button>
-                        <a href="#" id="login-btn" class="btn btn-primary">Institutional Login</a>
+                        <button id="connect-wallet-btn" class="btn btn-secondary" data-i18n="auth.connect_wallet">Institutional Wallet</button>
+                        <a href="#" id="login-btn" class="btn btn-primary" data-i18n="auth.login">Institutional Login</a>
                     </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
@@ -136,20 +136,20 @@
         <!-- Mobile menu, show/hide based on menu state. -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" class="nav-link block active" onclick="navigateTo('home')">Home</a>
-                <a href="#" class="nav-link block" onclick="navigateTo('data')">Data Hub</a>
-                <a href="#" class="nav-link block" onclick="navigateTo('launchpad')">Launchpad</a>
-                <a href="#" class="nav-link block" onclick="navigateTo('incubator')">Incubator</a>
-                <a href="#" class="nav-link block" onclick="navigateTo('research')">Research</a>
+                <a href="#" class="nav-link block active" onclick="navigateTo('home')" data-i18n="nav.home">Home</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('data')" data-i18n="nav.data">Data Hub</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('launchpad')" data-i18n="nav.launchpad">Launchpad</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('incubator')" data-i18n="nav.incubator">Incubator</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('research')" data-i18n="nav.research">Research</a>
                 <a href="https://sites.google.com/view/com2000ipo/ipo" target="_blank" class="nav-link block flex items-center space-x-2">
-                    <span>IPO Status</span>
+                    <span data-i18n="nav.ipo">IPO Status</span>
                     <svg class="w-3 h-3 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </a>
-                <a href="#" class="nav-link block" onclick="navigateTo('dashboard')">Dashboard</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('dashboard')" data-i18n="nav.dashboard">Dashboard</a>
                 <a href="#" class="nav-link block" onclick="navigateTo('research-detail')">Research Detail</a>
-                <a href="#" class="nav-link block" onclick="navigateTo('help')">Help Center</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('help')" data-i18n="nav.help">Help Center</a>
             </div>
         </div>
     </header>
@@ -160,12 +160,12 @@
     
     <footer class="border-t border-neutral-800 mt-12 py-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-400">
-            <p>&copy; 2025 Com2000.org. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; 2025 Com2000.org. All rights reserved.</p>
             <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="hover:text-white">About Us</a>
-                <a href="#" class="hover:text-white">Terms of Service</a>
-                <a href="#" class="hover:text-white">Privacy Policy</a>
-                <a href="#" class="hover:text-white">Contact Us</a>
+                <a href="#" class="hover:text-white" data-i18n="footer.about">About Us</a>
+                <a href="#" class="hover:text-white" data-i18n="footer.terms">Terms of Service</a>
+                <a href="#" class="hover:text-white" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="#" class="hover:text-white" data-i18n="footer.contact">Contact Us</a>
             </div>
         </div>
     </footer>
@@ -825,6 +825,255 @@
                             </div>
                             <h4 class="font-semibold text-white mb-2">Market Expansion</h4>
                             <p class="text-sm text-neutral-400">Access to diverse asset classes and global investment opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News & Insights Section -->
+            <div class="mt-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-bold text-white tracking-wider" data-i18n="news.title">Latest News & Market Insights</h2>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-neutral-400" data-i18n="news.subtitle">Stay informed with real-time updates</span>
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+
+                <!-- News Categories Tabs -->
+                <div class="flex space-x-1 mb-6 bg-neutral-800/50 p-1 rounded-lg">
+                    <button class="news-tab-btn active px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="market" data-i18n="news.tabs.market">Market Updates</button>
+                    <button class="news-tab-btn px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="regulatory" data-i18n="news.tabs.regulatory">Regulatory News</button>
+                    <button class="news-tab-btn px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="technology" data-i18n="news.tabs.technology">Technology</button>
+                    <button class="news-tab-btn px-4 py-2 rounded-md text-sm font-medium transition-all duration-200" data-tab="partnerships" data-i18n="news.tabs.partnerships">Partnerships</button>
+                </div>
+
+                <!-- Market Updates Tab -->
+                <div id="news-market" class="news-tab-content">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Featured News -->
+                        <div class="md:col-span-2 lg:col-span-1 glass-card p-6 rounded-lg border-l-4 border-blue-500 hover:shadow-blue-500/20 transition-all duration-300">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-blue">Breaking</span>
+                                <span class="text-xs text-neutral-400">2 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">BlackRock's BUIDL Fund Reaches $500M Milestone</h3>
+                            <p class="text-sm text-neutral-400 mb-4">BlackRock's USD Institutional Digital Liquidity Fund (BUIDL) has surpassed $500 million in assets under management, marking a significant milestone for tokenized treasury products.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
+                                        <span class="text-white font-bold text-xs">BR</span>
+                                    </div>
+                                    <span class="text-xs text-neutral-400">BlackRock</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Read More</button>
+                            </div>
+                        </div>
+
+                        <!-- Market News 1 -->
+                        <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-green">Market</span>
+                                <span class="text-xs text-neutral-400">4 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">RWA Market Cap Exceeds $8 Billion</h3>
+                            <p class="text-sm text-neutral-400 mb-4">The total market capitalization of Real World Assets on blockchain has reached a new all-time high of $8.2 billion, driven by institutional adoption.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-green-400 font-semibold">+15.3% this week</span>
+                                <button class="btn btn-secondary btn-sm">Details</button>
+                            </div>
+                        </div>
+
+                        <!-- Market News 2 -->
+                        <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-purple">Analysis</span>
+                                <span class="text-xs text-neutral-400">6 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Q4 2024 RWA Performance Report</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Comprehensive analysis of RWA sector performance, highlighting key trends and institutional investment patterns in the fourth quarter.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-blue-400 font-semibold">Research Report</span>
+                                <button class="btn btn-secondary btn-sm">Download</button>
+                            </div>
+                        </div>
+
+                        <!-- Market News 3 -->
+                        <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-yellow">Treasury</span>
+                                <span class="text-xs text-neutral-400">8 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Franklin Templeton Expands OnChain Offerings</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Franklin Templeton announces expansion of their OnChain U.S. Government Money Fund to additional blockchain networks.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-indigo-600 to-indigo-700 rounded-full flex items-center justify-center">
+                                        <span class="text-white font-bold text-xs">FT</span>
+                                    </div>
+                                    <span class="text-xs text-neutral-400">Franklin Templeton</span>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Learn More</button>
+                            </div>
+                        </div>
+
+                        <!-- Market News 4 -->
+                        <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-red">Alert</span>
+                                <span class="text-xs text-neutral-400">12 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Fed Rate Decision Impact on RWA Yields</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Federal Reserve's latest interest rate decision creates new opportunities for yield-bearing RWA products across multiple asset classes.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-yellow-400 font-semibold">Rate Impact Analysis</span>
+                                <button class="btn btn-secondary btn-sm">View Impact</button>
+                            </div>
+                        </div>
+
+                        <!-- Market News 5 -->
+                        <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-cyan">Innovation</span>
+                                <span class="text-xs text-neutral-400">1 day ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">New Cross-Chain RWA Protocol Launched</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Revolutionary cross-chain infrastructure enables seamless RWA transfers between Ethereum, Polygon, and Arbitrum networks.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-cyan-400 font-semibold">Protocol Launch</span>
+                                <button class="btn btn-secondary btn-sm">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regulatory News Tab -->
+                <div id="news-regulatory" class="news-tab-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="glass-card p-6 rounded-lg border-l-4 border-orange-500">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-orange">Regulatory</span>
+                                <span class="text-xs text-neutral-400">3 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">EU's MiCA Regulation Implementation Update</h3>
+                            <p class="text-sm text-neutral-400 mb-4">European Union provides clarity on RWA tokenization requirements under the Markets in Crypto-Assets regulation framework.</p>
+                            <button class="btn btn-primary btn-sm w-full">Read Full Update</button>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-blue">Policy</span>
+                                <span class="text-xs text-neutral-400">5 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Singapore MAS Issues RWA Guidelines</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Monetary Authority of Singapore releases comprehensive guidelines for institutional RWA tokenization and trading.</p>
+                            <button class="btn btn-secondary btn-sm w-full">View Guidelines</button>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-green">Compliance</span>
+                                <span class="text-xs text-neutral-400">1 day ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">US Treasury Clarifies Digital Asset Rules</h3>
+                            <p class="text-sm text-neutral-400 mb-4">U.S. Treasury Department provides additional clarity on tax implications for tokenized real-world assets.</p>
+                            <button class="btn btn-secondary btn-sm w-full">Tax Guidelines</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Tab -->
+                <div id="news-technology" class="news-tab-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="glass-card p-6 rounded-lg border-l-4 border-purple-500">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-purple">Tech</span>
+                                <span class="text-xs text-neutral-400">2 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">AI-Powered RWA Valuation System</h3>
+                            <p class="text-sm text-neutral-400 mb-4">New artificial intelligence system provides real-time valuation for complex real-world assets using machine learning algorithms.</p>
+                            <button class="btn btn-primary btn-sm w-full">Learn More</button>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-cyan">Blockchain</span>
+                                <span class="text-xs text-neutral-400">4 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Layer 2 Solutions for RWA Scaling</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Advanced Layer 2 blockchain solutions reduce transaction costs for RWA trading by up to 95% while maintaining security.</p>
+                            <button class="btn btn-secondary btn-sm w-full">Technical Details</button>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-yellow">Innovation</span>
+                                <span class="text-xs text-neutral-400">6 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Smart Contract Audit Standards</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Industry consortium establishes new security standards for RWA smart contracts with enhanced audit requirements.</p>
+                            <button class="btn btn-secondary btn-sm w-full">View Standards</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnerships Tab -->
+                <div id="news-partnerships" class="news-tab-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="glass-card p-6 rounded-lg border-l-4 border-green-500">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-green">Partnership</span>
+                                <span class="text-xs text-neutral-400">1 hour ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">JPMorgan Partners with Blockchain Firms</h3>
+                            <p class="text-sm text-neutral-400 mb-4">JPMorgan Chase announces strategic partnerships with leading blockchain infrastructure providers for institutional RWA services.</p>
+                            <button class="btn btn-primary btn-sm w-full">Partnership Details</button>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-blue">Collaboration</span>
+                                <span class="text-xs text-neutral-400">3 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">Cross-Border RWA Initiative</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Major financial institutions collaborate on cross-border RWA trading infrastructure to enhance global market access.</p>
+                            <button class="btn btn-secondary btn-sm w-full">Initiative Overview</button>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tag tag-purple">Alliance</span>
+                                <span class="text-xs text-neutral-400">5 hours ago</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-3">RWA Standards Consortium Formed</h3>
+                            <p class="text-sm text-neutral-400 mb-4">Leading technology and financial companies form consortium to establish industry standards for RWA tokenization.</p>
+                            <button class="btn btn-secondary btn-sm w-full">Consortium Members</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Insights Summary -->
+                <div class="mt-8 glass-card p-6 rounded-lg bg-gradient-to-r from-neutral-900/80 to-neutral-800/80">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white" data-i18n="news.insights.title">Market Insights Summary</h3>
+                        <span class="text-sm text-neutral-400" data-i18n="news.insights.updated">Updated every 15 minutes</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-400 mb-1">+12.5%</div>
+                            <div class="text-sm text-neutral-400" data-i18n="news.insights.rwa_growth">RWA Market Growth (30d)</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-400 mb-1">47</div>
+                            <div class="text-sm text-neutral-400" data-i18n="news.insights.new_projects">New Projects Launched</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-400 mb-1">$2.1B</div>
+                            <div class="text-sm text-neutral-400" data-i18n="news.insights.trading_volume">Weekly Trading Volume</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-yellow-400 mb-1">8.3%</div>
+                            <div class="text-sm text-neutral-400" data-i18n="news.insights.avg_yield">Average Yield Rate</div>
                         </div>
                     </div>
                 </div>
@@ -2594,6 +2843,240 @@
             }
         }
         
+        // Internationalization translations
+        const translations = {
+            en: {
+                // Navigation
+                'nav.home': 'Home',
+                'nav.data': 'Institutional Data Hub',
+                'nav.launchpad': 'Project Launch',
+                'nav.incubator': 'Asset Incubation',
+                'nav.research': 'Research Reports',
+                'nav.ipo': 'IPO Status',
+                'nav.dashboard': 'Dashboard',
+                'nav.help': 'Help Center',
+                
+                // Authentication
+                'auth.login': 'Institutional Login',
+                'auth.connect_wallet': 'Institutional Wallet',
+                'auth.email': 'Email Address',
+                'auth.password': 'Password',
+                'auth.login_button': 'Login',
+                'auth.register': 'Register Account',
+                
+                // Market Overview
+                'market.overview': 'Institutional-Grade Market Data',
+                'market.total_cap': 'Total Market Cap',
+                'market.volume_24h': '24h Volume',
+                'market.active_projects': 'Active Projects',
+                'market.institutions': 'Partner Institutions',
+                
+                // Table Headers
+                'table.rank': 'Rank',
+                'table.asset': 'Asset',
+                'table.price': 'Price',
+                'table.market_cap': 'Market Cap',
+                'table.tav': 'TAV',
+                'table.apy': 'APY',
+                'table.volume': '24h Volume',
+                'table.actions': 'Actions',
+                
+                // Buttons
+                'btn.view_details': 'View Details',
+                'btn.invest': 'Invest',
+                'btn.apply': 'Apply for Incubation',
+                'btn.learn_more': 'Learn More',
+                'btn.join_whitelist': 'Join Whitelist',
+                'btn.set_reminder': 'Set Reminder',
+                
+                // Launchpad
+                'launchpad.title': 'RWA Project Launchpad',
+                'launchpad.subtitle': 'Professional Investment Platform for Institutional Clients',
+                'launchpad.ongoing': 'Ongoing',
+                'launchpad.upcoming': 'Upcoming',
+                'launchpad.completed': 'Completed',
+                'launchpad.whitelist': 'Whitelist',
+                
+                // Incubator
+                'incubator.title': 'COM2000 Asset Incubation',
+                'incubator.subtitle': 'Professional RWA Project Development & Launch Support',
+                'incubator.services': 'Our Services',
+                'incubator.process': 'Incubation Process',
+                'incubator.success_stories': 'Success Stories',
+                
+                // Footer
+                'footer.about': 'About Us',
+                'footer.terms': 'Terms of Service',
+                'footer.privacy': 'Privacy Policy',
+                'footer.contact': 'Contact Us',
+                'footer.copyright': '© 2025 Com2000.org. All rights reserved.',
+                
+                // News
+                'news.title': 'Latest News & Insights',
+                'news.subtitle': 'Stay updated with the latest developments in institutional digital assets',
+                'news.tab.market': 'Market Dynamics',
+                'news.tab.regulatory': 'Regulatory News',
+                'news.tab.technology': 'Technology',
+                'news.tab.partnerships': 'Partnerships',
+                'news.insights.title': 'Market Insights Summary',
+                'news.insights.content': 'The institutional digital asset market continues to show strong growth momentum, with increasing regulatory clarity and technological innovations driving adoption across traditional financial institutions.'
+            },
+            zh: {
+                // Navigation
+                'nav.home': '首页',
+                'nav.data': '机构数据中心',
+                'nav.launchpad': '项目发射台',
+                'nav.incubator': '资产孵化',
+                'nav.research': '研究报告',
+                'nav.ipo': 'IPO状态',
+                'nav.dashboard': '仪表板',
+                'nav.help': '帮助中心',
+                
+                // Authentication
+                'auth.login': '机构登录',
+                'auth.connect_wallet': '机构钱包',
+                'auth.email': '邮箱地址',
+                'auth.password': '密码',
+                'auth.login_button': '登录',
+                'auth.register': '注册账户',
+                
+                // Market Overview
+                'market.overview': '机构级市场数据',
+                'market.total_cap': '总市值',
+                'market.volume_24h': '24小时交易量',
+                'market.active_projects': '活跃项目',
+                'market.institutions': '合作机构',
+                
+                // Table Headers
+                'table.rank': '排名',
+                'table.asset': '资产',
+                'table.price': '价格',
+                'table.market_cap': '市值',
+                'table.tav': '总资产价值',
+                'table.apy': '年化收益率',
+                'table.volume': '24小时交易量',
+                'table.actions': '操作',
+                
+                // Buttons
+                'btn.view_details': '查看详情',
+                'btn.invest': '投资',
+                'btn.apply': '申请孵化',
+                'btn.learn_more': '了解更多',
+                'btn.join_whitelist': '加入白名单',
+                'btn.set_reminder': '设置提醒',
+                
+                // Launchpad
+                'launchpad.title': 'RWA项目发射台',
+                'launchpad.subtitle': '面向机构客户的专业投资平台',
+                'launchpad.ongoing': '进行中',
+                'launchpad.upcoming': '即将开始',
+                'launchpad.completed': '已完成',
+                'launchpad.whitelist': '白名单',
+                
+                // Incubator
+                'incubator.title': 'COM2000资产孵化',
+                'incubator.subtitle': '专业RWA项目开发与发布支持',
+                'incubator.services': '我们的服务',
+                'incubator.process': '孵化流程',
+                'incubator.success_stories': '成功案例',
+                
+                // Footer
+                'footer.about': '关于我们',
+                'footer.terms': '服务条款',
+                'footer.privacy': '隐私政策',
+                'footer.contact': '联系我们',
+                'footer.copyright': '© 2025 Com2000.org. 保留所有权利。',
+                
+                // News
+                'news.title': '最新资讯与洞察',
+                'news.subtitle': '及时了解机构数字资产领域的最新发展动态',
+                'news.tab.market': '市场动态',
+                'news.tab.regulatory': '监管新闻',
+                'news.tab.technology': '技术创新',
+                'news.tab.partnerships': '合作伙伴',
+                'news.insights.title': '市场洞察总结',
+                'news.insights.content': '机构数字资产市场持续展现强劲增长势头，监管环境日趋明朗，技术创新推动传统金融机构加速采用数字资产解决方案。'
+            },
+            'zh-TW': {
+                // Navigation
+                'nav.home': '首頁',
+                'nav.data': '機構數據中心',
+                'nav.launchpad': '項目發射台',
+                'nav.incubator': '資產孵化',
+                'nav.research': '研究報告',
+                'nav.ipo': 'IPO狀態',
+                'nav.dashboard': '儀表板',
+                'nav.help': '幫助中心',
+                
+                // Authentication
+                'auth.login': '機構登錄',
+                'auth.connect_wallet': '機構錢包',
+                'auth.email': '郵箱地址',
+                'auth.password': '密碼',
+                'auth.login_button': '登錄',
+                'auth.register': '註冊賬戶',
+                
+                // Market Overview
+                'market.overview': '機構級市場數據',
+                'market.total_cap': '總市值',
+                'market.volume_24h': '24小時交易量',
+                'market.active_projects': '活躍項目',
+                'market.institutions': '合作機構',
+                
+                // Table Headers
+                'table.rank': '排名',
+                'table.asset': '資產',
+                'table.price': '價格',
+                'table.market_cap': '市值',
+                'table.tav': '總資產價值',
+                'table.apy': '年化收益率',
+                'table.volume': '24小時交易量',
+                'table.actions': '操作',
+                
+                // Buttons
+                'btn.view_details': '查看詳情',
+                'btn.invest': '投資',
+                'btn.apply': '申請孵化',
+                'btn.learn_more': '了解更多',
+                'btn.join_whitelist': '加入白名單',
+                'btn.set_reminder': '設置提醒',
+                
+                // Launchpad
+                'launchpad.title': 'RWA項目發射台',
+                'launchpad.subtitle': '面向機構客戶的專業投資平台',
+                'launchpad.ongoing': '進行中',
+                'launchpad.upcoming': '即將開始',
+                'launchpad.completed': '已完成',
+                'launchpad.whitelist': '白名單',
+                
+                // Incubator
+                'incubator.title': 'COM2000資產孵化',
+                'incubator.subtitle': '專業RWA項目開發與發布支持',
+                'incubator.services': '我們的服務',
+                'incubator.process': '孵化流程',
+                'incubator.success_stories': '成功案例',
+                
+                // Footer
+                'footer.about': '關於我們',
+                'footer.terms': '服務條款',
+                'footer.privacy': '隱私政策',
+                'footer.contact': '聯繫我們',
+                'footer.copyright': '© 2025 Com2000.org. 保留所有權利。',
+                
+                // News
+                'news.title': '最新資訊與洞察',
+                'news.subtitle': '及時了解機構數字資產領域的最新發展動態',
+                'news.tab.market': '市場動態',
+                'news.tab.regulatory': '監管新聞',
+                'news.tab.technology': '技術創新',
+                'news.tab.partnerships': '合作夥伴',
+                'news.insights.title': '市場洞察總結',
+                'news.insights.content': '機構數字資產市場持續展現強勁增長勢頭，監管環境日趨明朗，技術創新推動傳統金融機構加速採用數字資產解決方案。'
+            }
+        };
+        
+        let currentLanguage = 'en';
+        
         // Language switching
         function updateLanguage(lang) {
             currentLanguage = lang;
@@ -2604,6 +3087,12 @@
                     element.textContent = translations[lang][key];
                 }
             });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Save language preference
+            localStorage.setItem('preferred-language', lang);
         }
         
         // Simulate real-time data updates
@@ -2620,14 +3109,54 @@
             changeElement.className = change > 0 ? 'mt-1 text-sm text-green-400 flex items-center' : 'mt-1 text-sm text-red-400 flex items-center';
         }
         
+        // News tab functionality
+        function switchNewsTab(tabName) {
+            // Hide all news content
+            document.querySelectorAll('.news-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.news-tab').forEach(tab => {
+                tab.classList.remove('border-blue-500', 'text-blue-600');
+                tab.classList.add('border-transparent', 'text-gray-500');
+            });
+            
+            // Show selected content
+            document.getElementById(`${tabName}-content`).classList.remove('hidden');
+            
+            // Add active class to selected tab
+            document.querySelector(`[onclick="switchNewsTab('${tabName}')"]`).classList.remove('border-transparent', 'text-gray-500');
+            document.querySelector(`[onclick="switchNewsTab('${tabName}')"]`).classList.add('border-blue-500', 'text-blue-600');
+        }
+
         // Event listeners
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize page
             navigateTo('home');
             document.getElementById('nav-home')?.classList.add('active');
             
-            // Language selector
+            // Load saved language preference or detect browser language
+            const savedLanguage = localStorage.getItem('preferred-language');
+            const browserLanguage = navigator.language || navigator.userLanguage;
+            let defaultLanguage = 'en';
+            
+            if (savedLanguage && translations[savedLanguage]) {
+                defaultLanguage = savedLanguage;
+            } else if (browserLanguage.startsWith('zh')) {
+                if (browserLanguage.includes('TW') || browserLanguage.includes('HK')) {
+                    defaultLanguage = 'zh-TW';
+                } else {
+                    defaultLanguage = 'zh';
+                }
+            }
+            
+            // Set language selector and update language
             const languageSelector = document.getElementById('language-selector');
+            languageSelector.value = defaultLanguage;
+            updateLanguage(defaultLanguage);
+            
+            // Language selector change event
             languageSelector.addEventListener('change', (e) => {
                 updateLanguage(e.target.value);
             });
