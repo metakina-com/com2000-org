@@ -114,6 +114,9 @@
                 <a href="#" class="nav-link block" onclick="navigateTo('launchpad')">启动平台</a>
                 <a href="#" class="nav-link block" onclick="navigateTo('incubator')">孵化器</a>
                 <a href="#" class="nav-link block" onclick="navigateTo('research')">研究</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('dashboard')">个人中心</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('research-detail')">投研详情</a>
+                <a href="#" class="nav-link block" onclick="navigateTo('help')">帮助中心</a>
             </div>
         </div>
     </header>
@@ -296,8 +299,8 @@
                                  <td class="table-cell text-center">
                                      <div class="flex items-center justify-center space-x-2">
                                          <button class="btn btn-primary btn-sm" onclick="navigateTo('project-detail')" data-translate="details">详情</button>
-                                         <button class="btn btn-secondary btn-sm" data-translate="invest">投资</button>
-                                         <button class="btn btn-tertiary btn-sm" data-translate="follow">关注</button>
+                                         <button class="btn btn-secondary btn-sm">申请访问</button>
+                                         <button class="btn btn-tertiary btn-sm">联系客户经理</button>
                                      </div>
                                  </td>
                              </tr>
@@ -386,7 +389,7 @@
                                              <span class="text-white font-bold text-sm">CF</span>
                                          </div>
                                          <div>
-                                             <p class="font-semibold text-white">Centrifuge Pool</p>
+                                             <p class="font-semibold text-white">Centrifuge Pool <span class="text-xs text-yellow-400 border border-yellow-400 px-1.5 py-0.5 rounded-full ml-2">私密</span></p>
                                              <p class="text-xs text-neutral-400">供应链金融资产池</p>
                                         </div>
                                     </div>
@@ -669,6 +672,30 @@
                         <h2 class="text-xl font-bold text-white mb-4">关于 Maple Finance</h2>
                         <p class="text-neutral-300 leading-relaxed">Maple Finance 是一个去中心化的企业信贷市场。Maple 为机构借款人提供透明、高效的融资，并为贷方提供可持续的收益机会。贷方可以通过将资金存入流动性池来获得收益，这些流动性池为机构借款人提供资金。该协议利用“池代表”（Pool Delegates）——经过审查的信贷专业人士——来评估和管理贷款。</p>
                     </div>
+
+                    <!-- Due Diligence Section -->
+                    <div class="glass-card p-6 rounded-lg">
+                        <h2 class="text-xl font-bold text-white mb-4">尽职调查模块</h2>
+                        <p class="text-sm text-neutral-400 mb-4">为机构投资者提供深入的尽职调查材料。</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <a href="#" class="due-diligence-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>财务报表</span>
+                            </a>
+                            <a href="#" class="due-diligence-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-3"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                                <span>法律意见书</span>
+                            </a>
+                            <a href="#" class="due-diligence-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                <span>第三方审计报告</span>
+                            </a>
+                            <a href="#" class="due-diligence-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-3"><path d="M12 10v6"></path><path d="M12 18h.01"></path><path d="M19.07 4.93a10 10 0 0 0-16.28 11.31l-1.79 1.79a1 1 0 0 0 .7 1.7h18.6a1 1 0 0 0 .7-1.7l-1.79-1.79A10 10 0 0 0 19.07 4.93z"></path></svg>
+                                <span>风险评估报告</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Right Column (Info & Legal) -->
@@ -723,7 +750,13 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+
+                    <!-- Exclusive Services -->
+                    <div class="glass-card p-6 rounded-lg bg-gradient-to-br from-blue-900/50 to-neutral-900/50 border border-blue-700">
+                        <h2 class="text-xl font-bold text-white mb-2">专属服务</h2>
+                        <p class="text-neutral-300 mb-4">为家族办公室及机构投资者提供定制化服务与支持。</p>
+                        <button class="btn btn-primary w-full">联系客户经理</button>
+                    </div>
             </div>
         </div>
     </template>
@@ -822,6 +855,115 @@
         </div>
     </template>
     
+    <template id="template-dashboard">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-bold text-white mb-8">个人中心</h1>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="md:col-span-1">
+                    <div class="glass-card p-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/64x64/7c3aed/ffffff?text=U" alt="User Avatar" class="w-16 h-16 rounded-full mr-4">
+                            <div>
+                                <h2 class="text-xl font-bold text-white">用户名</h2>
+                                <p class="text-sm text-neutral-400">欢迎回来</p>
+                            </div>
+                        </div>
+                        <nav class="space-y-2">
+                            <a href="#" class="flex items-center px-4 py-2 text-white bg-neutral-700/50 rounded">资产总览</a>
+                            <a href="#" class="flex items-center px-4 py-2 text-neutral-300 hover:bg-neutral-700/50 rounded">我的投资</a>
+                            <a href="#" class="flex items-center px-4 py-2 text-neutral-300 hover:bg-neutral-700/50 rounded">交易历史</a>
+                            <a href="#" class="flex items-center px-4 py-2 text-neutral-300 hover:bg-neutral-700/50 rounded">账户设置</a>
+                            <a href="#" class="flex items-center px-4 py-2 text-neutral-300 hover:bg-neutral-700/50 rounded">安全中心</a>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Main Content -->
+                <div class="md:col-span-3">
+                    <div class="glass-card p-8">
+                        <h3 class="text-2xl font-bold text-white mb-6">资产总览</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-neutral-800/50 p-6 rounded-lg">
+                                <p class="text-sm text-neutral-400 mb-2">总资产价值</p>
+                                <p class="text-3xl font-bold text-white">$125,830.50</p>
+                                <p class="text-sm text-green-400 mt-1">+2.5% (24h)</p>
+                            </div>
+                            <div class="bg-neutral-800/50 p-6 rounded-lg">
+                                <p class="text-sm text-neutral-400 mb-2">可用余额 (USDC)</p>
+                                <p class="text-3xl font-bold text-white">$10,500.00</p>
+                            </div>
+                            <div class="bg-neutral-800/50 p-6 rounded-lg">
+                                <p class="text-sm text-neutral-400 mb-2">总收益</p>
+                                <p class="text-3xl font-bold text-white">$5,830.50</p>
+                                <p class="text-sm text-green-400 mt-1">+15.2% (All time)</p>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold text-white mb-4">资产分配</h4>
+                            <!-- Placeholder for chart -->
+                            <div class="h-64 bg-neutral-800 rounded-lg flex items-center justify-center">
+                                <p class="text-neutral-500">资产分配图表</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template-research-detail">
+        <div class="container mx-auto px-4 py-8 max-w-4xl">
+            <article class="prose prose-invert lg:prose-xl mx-auto">
+                <div class="text-center mb-8">
+                    <p class="text-blue-400 font-semibold">深度分析</p>
+                    <h1 class="text-4xl font-bold text-white">现实世界资产（RWA）的代币化：未来金融的基础设施</h1>
+                    <p class="mt-4 text-lg text-neutral-400">发布于 2025-01-15 by Com2000 研究团队</p>
+                </div>
+                
+                <h2>核心观点</h2>
+                <ul>
+                    <li>RWA 代币化将成为连接传统金融与去中心化金融（DeFi）的关键桥梁。</li>
+                    <li>预计到 2030 年，代币化非流动性资产的市场规模可能达到 16 万亿美元。</li>
+                    <li>合规性、预言机和跨链互操作性是当前面临的主要挑战。</li>
+                </ul>
+
+                <h2>市场现状与机遇</h2>
+                <p>...</p>
+
+                <h2>技术实现路径</h2>
+                <p>...</p>
+
+                <h2>风险与挑战</h2>
+                <p>...</p>
+
+                <h2>结论</h2>
+                <p>...</p>
+            </article>
+        </div>
+    </template>
+
+    <template id="template-help">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-bold text-white mb-8 text-center">帮助中心</h1>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <div class="glass-card p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">如何开始投资？</h3>
+                        <p class="text-neutral-300">要开始投资，您需要先连接您的加密钱包，完成 KYC 验证，然后浏览我们的项目池，选择您感兴趣的项目进行投资。</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">什么是 KYC？</h3>
+                        <p class="text-neutral-300">KYC（了解您的客户）是金融机构和在线平台用来验证客户身份的标准流程，以防止欺诈、洗钱和恐怖主义融资。</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">支持哪些钱包？</h3>
+                        <p class="text-neutral-300">我们目前支持 MetaMask、WalletConnect 和 Coinbase Wallet。未来将集成更多钱包选项。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
     <template id="template-research">
         <div class="text-center py-16">
             <h1 class="text-4xl font-bold text-white">研究与洞察</h1>
@@ -976,6 +1118,9 @@
             launchpad: document.getElementById('template-launchpad'),
             incubator: document.getElementById('template-incubator'),
             research: document.getElementById('template-research'),
+            dashboard: document.getElementById('template-dashboard'),
+            'research-detail': document.getElementById('template-research-detail'),
+            help: document.getElementById('template-help'),
         };
         const navLinks = document.querySelectorAll('.nav-link');
 
