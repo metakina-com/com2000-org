@@ -2490,6 +2490,71 @@
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
+
+        // Launchpad tab switching functionality
+        function switchLaunchpadTab(tabName) {
+            // Hide all tab contents
+            const tabs = ['ongoing-projects', 'upcoming-projects', 'completed-projects', 'whitelist-projects'];
+            tabs.forEach(tab => {
+                const element = document.getElementById(tab);
+                if (element) {
+                    element.classList.add('hidden');
+                }
+            });
+
+            // Show selected tab content
+            const selectedTab = document.getElementById(tabName + '-projects');
+            if (selectedTab) {
+                selectedTab.classList.remove('hidden');
+            }
+
+            // Update tab button styles
+            const tabButtons = document.querySelectorAll('[onclick*="switchLaunchpadTab"]');
+            tabButtons.forEach(button => {
+                button.classList.remove('text-white', 'border-b-2', 'border-blue-500');
+                button.classList.add('text-neutral-400');
+            });
+
+            // Highlight active tab button
+            const activeButton = document.querySelector(`[onclick="switchLaunchpadTab('${tabName}')"]`);
+            if (activeButton) {
+                activeButton.classList.remove('text-neutral-400');
+                activeButton.classList.add('text-white', 'border-b-2', 'border-blue-500');
+            }
+        }
+
+        // Investment modal functions
+        function openInvestModal(projectId) {
+            alert(`Opening investment modal for project: ${projectId}\n\nThis would normally open a detailed investment interface with:\n- Project details\n- Investment amount selector\n- Risk disclosures\n- Transaction confirmation`);
+        }
+
+        function joinWhitelist(projectId) {
+            alert(`Joining whitelist for project: ${projectId}\n\nThis would normally:\n- Show whitelist requirements\n- Track completion progress\n- Confirm whitelist registration`);
+        }
+
+        function setReminder(projectId) {
+            alert(`Setting reminder for project: ${projectId}\n\nYou will be notified when this project goes live!`);
+        }
+
+        function viewProjectDetails(projectId) {
+            alert(`Viewing details for project: ${projectId}\n\nThis would show:\n- Complete project information\n- Performance history\n- Trading data\n- Investment returns`);
+        }
+
+        function completeTask(taskType) {
+            alert(`Completing task: ${taskType}\n\nThis would normally:\n- Verify task completion\n- Update progress\n- Award points/benefits`);
+        }
+
+        function continueWhitelist(projectId) {
+            alert(`Continuing whitelist tasks for: ${projectId}\n\nThis would show remaining tasks and progress.`);
+        }
+
+        function startKYC() {
+            alert('Starting KYC verification process...\n\nThis would normally open the KYC verification flow.');
+        }
+
+        function learnMore() {
+            alert('Learn more about RWA Launchpad...\n\nThis would show detailed information about the platform.');
+        }
         
         function openInvestModal(projectId) {
             if (!currentUser) {
