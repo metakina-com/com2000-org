@@ -3311,19 +3311,12 @@
             navigateTo('home');
             document.getElementById('nav-home')?.classList.add('active');
             
-            // Load saved language preference or detect browser language
+            // Load saved language preference or use English as default
             const savedLanguage = localStorage.getItem('preferred-language');
-            const browserLanguage = navigator.language || navigator.userLanguage;
             let defaultLanguage = 'en';
             
             if (savedLanguage && translations[savedLanguage]) {
                 defaultLanguage = savedLanguage;
-            } else if (browserLanguage.startsWith('zh')) {
-                if (browserLanguage.includes('TW') || browserLanguage.includes('HK')) {
-                    defaultLanguage = 'zh-TW';
-                } else {
-                    defaultLanguage = 'zh';
-                }
             }
             
             // Set language selector and update language
