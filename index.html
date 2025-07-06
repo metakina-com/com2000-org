@@ -56,6 +56,27 @@
         .tag-yellow {
             @apply bg-yellow-900 text-yellow-300;
         }
+        .tag-red {
+            @apply bg-red-900 text-red-300;
+        }
+        .tag-purple {
+            @apply bg-purple-900 text-purple-300;
+        }
+        .tag-pink {
+            @apply bg-pink-900 text-pink-300;
+        }
+        .tag-indigo {
+            @apply bg-indigo-900 text-indigo-300;
+        }
+        .tag-orange {
+            @apply bg-orange-900 text-orange-300;
+        }
+        .tag-teal {
+            @apply bg-teal-900 text-teal-300;
+        }
+        .tag-cyan {
+            @apply bg-cyan-900 text-cyan-300;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +98,12 @@
                             <a href="#" id="nav-launchpad" class="nav-link" onclick="navigateTo('launchpad')">Project Launch</a>
                             <a href="#" id="nav-incubator" class="nav-link" onclick="navigateTo('incubator')">Asset Incubation</a>
                             <a href="#" id="nav-research" class="nav-link" onclick="navigateTo('research')">Research Reports</a>
+                            <a href="https://sites.google.com/view/com2000ipo/ipo" target="_blank" class="nav-link flex items-center space-x-1">
+                                <span>IPO Status</span>
+                                <svg class="w-3 h-3 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -114,6 +141,12 @@
                 <a href="#" class="nav-link block" onclick="navigateTo('launchpad')">Launchpad</a>
                 <a href="#" class="nav-link block" onclick="navigateTo('incubator')">Incubator</a>
                 <a href="#" class="nav-link block" onclick="navigateTo('research')">Research</a>
+                <a href="https://sites.google.com/view/com2000ipo/ipo" target="_blank" class="nav-link block flex items-center space-x-2">
+                    <span>IPO Status</span>
+                    <svg class="w-3 h-3 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
                 <a href="#" class="nav-link block" onclick="navigateTo('dashboard')">Dashboard</a>
                 <a href="#" class="nav-link block" onclick="navigateTo('research-detail')">Research Detail</a>
                 <a href="#" class="nav-link block" onclick="navigateTo('help')">Help Center</a>
@@ -456,40 +489,344 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr class="border-b border-neutral-800 transition-colors duration-200 hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')">
-                                <td class="table-cell text-neutral-400">2</td>
+                            <!-- Institutional Project Row 6 -->
+                            <tr class="border-b border-neutral-800 transition-colors duration-200 hover:bg-neutral-800/50">
+                                <td class="table-cell text-neutral-400 font-mono">006</td>
                                 <td class="table-cell">
                                     <div class="flex items-center">
-                                        <img class="h-8 w-8 rounded-full mr-3" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="Franklin Templeton OnChain U.S. Government Money Fund">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center mr-3">
+                                            <span class="text-white font-bold text-sm">FT</span>
+                                        </div>
                                         <div>
                                             <p class="font-semibold text-white">Franklin Templeton OnChain U.S. Government Money Fund</p>
-                                            <p class="text-xs text-neutral-400">FOBXX</p>
+                                            <p class="text-xs text-neutral-400">Tokenized Money Market Fund</p>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="table-cell"><span class="tag tag-yellow">US Treasury</span></td>
-                                <td class="table-cell text-right text-white">$358M</td>
-                                <td class="table-cell text-right text-green-400">5.31%</td>
-                                <td class="table-cell text-right text-white">$1.8M</td>
+                                <td class="table-cell">
+                                    <span class="tag tag-blue">Money Market</span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900 text-green-300">
+                                        AAA
+                                    </span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900 text-green-300">
+                                        ✓ Compliant
+                                    </span>
+                                </td>
+                                <td class="table-cell text-right text-white font-mono">$358.2M</td>
+                                <td class="table-cell text-right text-green-400 font-semibold">5.31%</td>
+                                <td class="table-cell text-right text-white font-mono">$75K</td>
+                                <td class="table-cell text-center">
+                                    <div class="flex items-center justify-center space-x-2">
+                                        <button class="btn btn-primary btn-sm" onclick="navigateTo('project-detail')">Details</button>
+                                        <button class="btn btn-secondary btn-sm">Invest</button>
+                                        <button class="btn btn-tertiary btn-sm">Follow</button>
+                                    </div>
+                                </td>
                             </tr>
-                            <tr class="hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')">
-                                <td class="table-cell text-neutral-400">3</td>
+                            <!-- Institutional Project Row 7 -->
+                            <tr class="border-b border-neutral-800 transition-colors duration-200 hover:bg-neutral-800/50">
+                                <td class="table-cell text-neutral-400 font-mono">007</td>
                                 <td class="table-cell">
                                     <div class="flex items-center">
-                                        <img class="h-8 w-8 rounded-full mr-3" src="https://s2.coinmarketcap.com/static/img/coins/64x64/11091.png" alt="Ondo Short-Term US Government Treasuries">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-orange-600 to-orange-700 rounded-lg flex items-center justify-center mr-3">
+                                            <span class="text-white font-bold text-sm">ON</span>
+                                        </div>
                                         <div>
                                             <p class="font-semibold text-white">Ondo Short-Term US Government Treasuries</p>
-                                            <p class="text-xs text-neutral-400">OSTB</p>
+                                            <p class="text-xs text-neutral-400">Short-Term Treasury Fund</p>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="table-cell"><span class="tag tag-yellow">US Treasury</span></td>
-                                <td class="table-cell text-right text-white">$141M</td>
-                                <td class="table-cell text-right text-green-400">5.20%</td>
-                                <td class="table-cell text-right text-white">$750K</td>
+                                <td class="table-cell">
+                                    <span class="tag tag-yellow">US Treasury</span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900 text-green-300">
+                                        AAA
+                                    </span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900 text-green-300">
+                                        ✓ Compliant
+                                    </span>
+                                </td>
+                                <td class="table-cell text-right text-white font-mono">$141.5M</td>
+                                <td class="table-cell text-right text-green-400 font-semibold">5.20%</td>
+                                <td class="table-cell text-right text-white font-mono">$50K</td>
+                                <td class="table-cell text-center">
+                                    <div class="flex items-center justify-center space-x-2">
+                                        <button class="btn btn-primary btn-sm" onclick="navigateTo('project-detail')">Details</button>
+                                        <button class="btn btn-secondary btn-sm">Invest</button>
+                                        <button class="btn btn-tertiary btn-sm">Follow</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Institutional Project Row 8 -->
+                            <tr class="border-b border-neutral-800 transition-colors duration-200 hover:bg-neutral-800/50">
+                                <td class="table-cell text-neutral-400 font-mono">008</td>
+                                <td class="table-cell">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-teal-600 to-teal-700 rounded-lg flex items-center justify-center mr-3">
+                                            <span class="text-white font-bold text-sm">PX</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-white">PAX Gold <span class="text-xs text-blue-400 border border-blue-400 px-1.5 py-0.5 rounded-full ml-2">Commodity</span></p>
+                                            <p class="text-xs text-neutral-400">Tokenized Physical Gold</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="table-cell">
+                                    <span class="tag tag-yellow">Precious Metals</span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-900 text-blue-300">
+                                        AA+
+                                    </span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900 text-green-300">
+                                        ✓ Compliant
+                                    </span>
+                                </td>
+                                <td class="table-cell text-right text-white font-mono">$429.3M</td>
+                                <td class="table-cell text-right text-neutral-400 font-semibold">N/A</td>
+                                <td class="table-cell text-right text-white font-mono">$25K</td>
+                                <td class="table-cell text-center">
+                                    <div class="flex items-center justify-center space-x-2">
+                                        <button class="btn btn-primary btn-sm" onclick="navigateTo('project-detail')">Details</button>
+                                        <button class="btn btn-secondary btn-sm">Invest</button>
+                                        <button class="btn btn-tertiary btn-sm">Follow</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Institutional Project Row 9 -->
+                            <tr class="border-b border-neutral-800 transition-colors duration-200 hover:bg-neutral-800/50">
+                                <td class="table-cell text-neutral-400 font-mono">009</td>
+                                <td class="table-cell">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-pink-600 to-pink-700 rounded-lg flex items-center justify-center mr-3">
+                                            <span class="text-white font-bold text-sm">TG</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-white">Tangible Real Estate Portfolio</p>
+                                            <p class="text-xs text-neutral-400">European Real Estate Fund</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="table-cell">
+                                    <span class="tag tag-green">Real Estate</span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-900 text-yellow-300">
+                                        A+
+                                    </span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900 text-green-300">
+                                        ✓ Compliant
+                                    </span>
+                                </td>
+                                <td class="table-cell text-right text-white font-mono">$95.6M</td>
+                                <td class="table-cell text-right text-green-400 font-semibold">8.25%</td>
+                                <td class="table-cell text-right text-white font-mono">$100K</td>
+                                <td class="table-cell text-center">
+                                    <div class="flex items-center justify-center space-x-2">
+                                        <button class="btn btn-primary btn-sm" onclick="navigateTo('project-detail')">Details</button>
+                                        <button class="btn btn-secondary btn-sm">Invest</button>
+                                        <button class="btn btn-tertiary btn-sm">Follow</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Institutional Project Row 10 -->
+                            <tr class="border-b border-neutral-800 transition-colors duration-200 hover:bg-neutral-800/50">
+                                <td class="table-cell text-neutral-400 font-mono">010</td>
+                                <td class="table-cell">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center mr-3">
+                                            <span class="text-white font-bold text-sm">SW</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-white">Swarm Markets Infrastructure Bonds</p>
+                                            <p class="text-xs text-neutral-400">Infrastructure Investment Fund</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="table-cell">
+                                    <span class="tag tag-blue">Infrastructure</span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-900 text-blue-300">
+                                        AA-
+                                    </span>
+                                </td>
+                                <td class="table-cell text-center">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900 text-green-300">
+                                        ✓ Compliant
+                                    </span>
+                                </td>
+                                <td class="table-cell text-right text-white font-mono">$67.8M</td>
+                                <td class="table-cell text-right text-green-400 font-semibold">7.85%</td>
+                                <td class="table-cell text-right text-white font-mono">$200K</td>
+                                <td class="table-cell text-center">
+                                    <div class="flex items-center justify-center space-x-2">
+                                        <button class="btn btn-primary btn-sm" onclick="navigateTo('project-detail')">Details</button>
+                                        <button class="btn btn-secondary btn-sm">Invest</button>
+                                        <button class="btn btn-tertiary btn-sm">Follow</button>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Strategic Partners & Ecosystem Section -->
+            <div>
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-3xl font-bold text-white tracking-wider">Strategic Partners & Ecosystem</h2>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-neutral-400">Trusted by leading institutions</span>
+                        <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Kolmarket Partnership -->
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-purple-500 shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">K</span>
+                            </div>
+                            <span class="tag tag-purple">KOL Assets</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Kolmarket</h3>
+                        <p class="text-sm text-neutral-400 mb-4">KOL影响力资产交易平台 - 将KOL影响力代币化，通过区块链技术实现影响力资产的透明交易</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Total Market Cap:</span>
+                                <span class="text-white font-mono">$2.8B</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Active KOLs:</span>
+                                <span class="text-green-400 font-semibold">1,256</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Average APY:</span>
+                                <span class="text-green-400 font-semibold">23.5%</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://kolmarket.io/" target="_blank" class="btn btn-primary btn-sm flex-1 text-center">Visit Platform</a>
+                            <button class="btn btn-secondary btn-sm">Partnership</button>
+                        </div>
+                    </div>
+
+                    <!-- Metakina Partnership -->
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-blue-500 shadow-lg hover:shadow-blue-500/20 transition-all duration-300 hover:scale-105">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">M</span>
+                            </div>
+                            <span class="tag tag-blue">RWA Solutions</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">元话RWA</h3>
+                        <p class="text-sm text-neutral-400 mb-4">盘活万亿资产，合规连接全球资本 - 提供机构级、端到端、合规优先的RWA与数据资产化解决方案</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Service Focus:</span>
+                                <span class="text-white">Asset Digitization</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Compliance:</span>
+                                <span class="text-green-400 font-semibold">LPF+QFLP</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Coverage:</span>
+                                <span class="text-blue-400">Global Markets</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://metakina.com/#/home" target="_blank" class="btn btn-primary btn-sm flex-1 text-center">Visit Platform</a>
+                            <button class="btn btn-secondary btn-sm">Collaborate</button>
+                        </div>
+                    </div>
+
+                    <!-- DappWeb Partnership -->
+                    <div class="glass-card p-6 rounded-lg border-l-4 border-green-500 shadow-lg hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">D</span>
+                            </div>
+                            <span class="tag tag-green">Tech Solutions</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">达普韦伯</h3>
+                        <p class="text-sm text-neutral-400 mb-4">领先的区块链、AI与可信数据解决方案提供商 - 专业的Web3.0技术服务商和数据交易系统开发者</p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Clients Served:</span>
+                                <span class="text-white font-mono">200+</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Specialization:</span>
+                                <span class="text-green-400 font-semibold">DApp & AI</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-neutral-400">Location:</span>
+                                <span class="text-blue-400">Xi'an, China</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://dappweb.cn/" target="_blank" class="btn btn-primary btn-sm flex-1 text-center">Visit Website</a>
+                            <button class="btn btn-secondary btn-sm">Tech Support</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnership Benefits -->
+                <div class="mt-8 glass-card p-6 rounded-lg bg-gradient-to-r from-neutral-900/80 to-neutral-800/80">
+                    <h3 class="text-xl font-bold text-white mb-4 text-center">Partnership Ecosystem Benefits</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">KOL Asset Integration</h4>
+                            <p class="text-sm text-neutral-400">Access to tokenized influence assets and social capital markets</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">Compliance Framework</h4>
+                            <p class="text-sm text-neutral-400">Cross-border regulatory compliance and institutional-grade security</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">Technical Infrastructure</h4>
+                            <p class="text-sm text-neutral-400">Advanced blockchain development and AI-powered solutions</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white mb-2">Market Expansion</h4>
+                            <p class="text-sm text-neutral-400">Access to diverse asset classes and global investment opportunities</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -507,6 +844,7 @@
                     <option value="treasury">US Treasury</option>
                     <option value="real-estate">Real Estate</option>
                     <option value="commodities">Commodities</option>
+                    <option value="infrastructure">Infrastructure</option>
                 </select>
                 <select id="blockchain-filter" class="bg-neutral-800 border-neutral-700 rounded-md text-white px-3 py-2">
                     <option value="all">All Blockchains</option>
@@ -601,6 +939,96 @@
                             <td class="table-cell text-right text-white" data-value="320000">$320K</td>
                             <td class="table-cell text-white">Ethereum</td>
                         </tr>
+                        <tr class="hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')" data-asset="infrastructure" data-blockchain="ethereum" data-jurisdiction="switzerland">
+                            <td class="table-cell text-neutral-400">5</td>
+                            <td class="table-cell">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 rounded-full mr-3" src="https://placehold.co/40x40/0891b2/ffffff?text=S" alt="Swarm Markets">
+                                    <p class="font-semibold text-white">Swarm Markets</p>
+                                </div>
+                            </td>
+                            <td class="table-cell text-right text-white" data-value="12.45">$12.45</td>
+                            <td class="table-cell text-right text-white" data-value="67800000">$67.8M</td>
+                            <td class="table-cell text-right text-white" data-value="67800000">$67.8M</td>
+                            <td class="table-cell text-right text-green-400" data-value="7.85">7.85%</td>
+                            <td class="table-cell text-right text-white" data-value="890000">$890K</td>
+                            <td class="table-cell text-white">Ethereum</td>
+                        </tr>
+                        <tr class="hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')" data-asset="treasury" data-blockchain="ethereum" data-jurisdiction="usa">
+                            <td class="table-cell text-neutral-400">6</td>
+                            <td class="table-cell">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 rounded-full mr-3" src="https://placehold.co/40x40/6366f1/ffffff?text=F" alt="Franklin Templeton">
+                                    <p class="font-semibold text-white">Franklin Templeton FOBXX</p>
+                                </div>
+                            </td>
+                            <td class="table-cell text-right text-white" data-value="1.00">$1.00</td>
+                            <td class="table-cell text-right text-white" data-value="358200000">$358.2M</td>
+                            <td class="table-cell text-right text-white" data-value="358200000">$358.2M</td>
+                            <td class="table-cell text-right text-green-400" data-value="5.31">5.31%</td>
+                            <td class="table-cell text-right text-white" data-value="1800000">$1.8M</td>
+                            <td class="table-cell text-white">Ethereum</td>
+                        </tr>
+                        <tr class="hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')" data-asset="treasury" data-blockchain="ethereum" data-jurisdiction="usa">
+                            <td class="table-cell text-neutral-400">7</td>
+                            <td class="table-cell">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 rounded-full mr-3" src="https://placehold.co/40x40/ea580c/ffffff?text=O" alt="Ondo Finance">
+                                    <p class="font-semibold text-white">Ondo OSTB</p>
+                                </div>
+                            </td>
+                            <td class="table-cell text-right text-white" data-value="1.00">$1.00</td>
+                            <td class="table-cell text-right text-white" data-value="141500000">$141.5M</td>
+                            <td class="table-cell text-right text-white" data-value="141500000">$141.5M</td>
+                            <td class="table-cell text-right text-green-400" data-value="5.20">5.20%</td>
+                            <td class="table-cell text-right text-white" data-value="750000">$750K</td>
+                            <td class="table-cell text-white">Ethereum</td>
+                        </tr>
+                        <tr class="hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')" data-asset="credit" data-blockchain="polygon" data-jurisdiction="singapore">
+                            <td class="table-cell text-neutral-400">8</td>
+                            <td class="table-cell">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 rounded-full mr-3" src="https://placehold.co/40x40/7c3aed/ffffff?text=C" alt="Centrifuge">
+                                    <p class="font-semibold text-white">Centrifuge</p>
+                                </div>
+                            </td>
+                            <td class="table-cell text-right text-white" data-value="0.85">$0.85</td>
+                            <td class="table-cell text-right text-white" data-value="89300000">$89.3M</td>
+                            <td class="table-cell text-right text-white" data-value="89300000">$89.3M</td>
+                            <td class="table-cell text-right text-green-400" data-value="8.75">8.75%</td>
+                            <td class="table-cell text-right text-white" data-value="450000">$450K</td>
+                            <td class="table-cell text-white">Ethereum, Polygon</td>
+                        </tr>
+                        <tr class="hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')" data-asset="real-estate" data-blockchain="ethereum" data-jurisdiction="usa">
+                            <td class="table-cell text-neutral-400">9</td>
+                            <td class="table-cell">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 rounded-full mr-3" src="https://placehold.co/40x40/ec4899/ffffff?text=T" alt="Tangible">
+                                    <p class="font-semibold text-white">Tangible</p>
+                                </div>
+                            </td>
+                            <td class="table-cell text-right text-white" data-value="0.32">$0.32</td>
+                            <td class="table-cell text-right text-white" data-value="95600000">$95.6M</td>
+                            <td class="table-cell text-right text-white" data-value="95600000">$95.6M</td>
+                            <td class="table-cell text-right text-green-400" data-value="8.25">8.25%</td>
+                            <td class="table-cell text-right text-white" data-value="280000">$280K</td>
+                            <td class="table-cell text-white">Polygon</td>
+                        </tr>
+                        <tr class="hover:bg-neutral-800/50 cursor-pointer" onclick="navigateTo('project-detail')" data-asset="credit" data-blockchain="solana" data-jurisdiction="usa">
+                            <td class="table-cell text-neutral-400">10</td>
+                            <td class="table-cell">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 rounded-full mr-3" src="https://placehold.co/40x40/dc2626/ffffff?text=G" alt="Goldman Sachs">
+                                    <p class="font-semibold text-white">Goldman Sachs Digital Assets</p>
+                                </div>
+                            </td>
+                            <td class="table-cell text-right text-white" data-value="125.67">$125.67</td>
+                            <td class="table-cell text-right text-white" data-value="1200000000">$1.2B</td>
+                            <td class="table-cell text-right text-white" data-value="1200000000">$1.2B</td>
+                            <td class="table-cell text-right text-green-400" data-value="6.95">6.95%</td>
+                            <td class="table-cell text-right text-white" data-value="15000000">$15.0M</td>
+                            <td class="table-cell text-white">Ethereum, Solana</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -663,7 +1091,9 @@
                             </div>
                         </div>
                         <!-- Chart.js canvas -->
-                        <canvas id="projectChart"></canvas>
+                        <div class="relative h-80">
+                            <canvas id="projectChart"></canvas>
+                        </div>
                         <!-- PRD Note: This should be a full-featured TradingView chart -->
                     </div>
 
