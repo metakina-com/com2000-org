@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Com2000 - RWA Data and Launchpad Platform</title>
+    <!-- 在开发环境中使用CDN，生产环境应该使用PostCSS插件 -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 生产环境推荐: https://tailwindcss.com/docs/installation -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lucide-react/dist/umd/lucide-react.js"></script>
+    <!-- 移除 Lucide React，它需要 React 环境才能工作 -->
     <!-- Web3 Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
     <!-- i18n Support -->
@@ -94,6 +96,7 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-6">
+                            <a href="#" id="nav-home" class="nav-link" onclick="navigateTo('home')" data-i18n="nav.home">Home</a>
                             <a href="#" id="nav-data" class="nav-link" onclick="navigateTo('data')" data-i18n="nav.data">Institutional Data Hub</a>
                             <a href="#" id="nav-launchpad" class="nav-link" onclick="navigateTo('launchpad')" data-i18n="nav.launchpad">Project Launch</a>
                             <a href="#" id="nav-incubator" class="nav-link" onclick="navigateTo('incubator')" data-i18n="nav.incubator">Asset Incubation</a>
@@ -2491,9 +2494,217 @@
     </template>
 
     <template id="template-research">
-        <div class="text-center py-16">
-            <h1 class="text-4xl font-bold text-white">Research & Insights</h1>
-            <p class="mt-4 text-lg text-neutral-300 max-w-3xl mx-auto">Institutional-grade RWA market analysis by the Com2000 Research Team.</p>
+        <div class="space-y-12">
+            <!-- Header Section -->
+            <div class="text-center py-16">
+                <h1 class="text-4xl font-bold text-white">Research & Insights</h1>
+                <p class="mt-4 text-lg text-neutral-300 max-w-3xl mx-auto">Institutional-grade RWA market analysis by the Com2000 Research Team.</p>
+            </div>
+
+            <!-- Research Categories -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">项目研报</h3>
+                    <p class="text-neutral-300 mb-4">深度项目分析报告，提供对RWA项目的全面评估、风险分析和投资价值判断。</p>
+                    <button class="btn btn-primary w-full" onclick="navigateTo('research-detail')">查看项目研报</button>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">行业报告</h3>
+                    <p class="text-neutral-300 mb-4">区块链行业趋势分析，包括市场动态、监管环境变化和新兴技术发展趋势。</p>
+                    <button class="btn btn-primary w-full" onclick="navigateTo('research-detail')">查看行业报告</button>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">投资策略</h3>
+                    <p class="text-neutral-300 mb-4">专业投资建议和策略，帮助机构投资者制定RWA资产配置方案和风险管理策略。</p>
+                    <button class="btn btn-primary w-full" onclick="navigateTo('research-detail')">查看投资策略</button>
+                </div>
+            </div>
+
+            <!-- Featured Research Reports -->
+            <div>
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-white">精选研究报告</h2>
+                    <div class="flex space-x-2">
+                        <button class="btn btn-secondary text-sm">查看全部</button>
+                        <select class="bg-neutral-800 border border-neutral-600 rounded px-3 py-2 text-sm text-white">
+                            <option>全部类型</option>
+                            <option>项目研报</option>
+                            <option>行业报告</option>
+                            <option>投资策略</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Report Card 1 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-r from-blue-900 to-indigo-900 relative">
+                            <div class="absolute top-4 left-4">
+                                <span class="tag tag-blue">项目研报</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">BlackRock BUIDL: 机构级资产代币化的先驱</h3>
+                            <p class="text-neutral-400 text-sm mb-4">深入分析BlackRock BUIDL项目的技术架构、合规框架和市场前景，评估其作为机构级资产代币化解决方案的潜力。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-neutral-500 text-sm">2025-02-15</span>
+                                <button class="btn btn-primary btn-sm" onclick="navigateTo('research-detail')">阅读报告</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Report Card 2 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-r from-purple-900 to-pink-900 relative">
+                            <div class="absolute top-4 left-4">
+                                <span class="tag tag-purple">行业报告</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">2025年RWA市场趋势展望</h3>
+                            <p class="text-neutral-400 text-sm mb-4">分析全球RWA市场发展趋势，包括监管环境变化、技术创新和机构参与度，预测未来市场规模和发展方向。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-neutral-500 text-sm">2025-01-30</span>
+                                <button class="btn btn-primary btn-sm" onclick="navigateTo('research-detail')">阅读报告</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Report Card 3 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
+                        <div class="h-48 bg-gradient-to-r from-green-900 to-teal-900 relative">
+                            <div class="absolute top-4 left-4">
+                                <span class="tag tag-green">投资策略</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">机构投资者RWA资产配置指南</h3>
+                            <p class="text-neutral-400 text-sm mb-4">为机构投资者提供RWA资产配置策略，包括风险评估框架、投资组合构建和流动性管理方法。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-neutral-500 text-sm">2025-01-15</span>
+                                <button class="btn btn-primary btn-sm" onclick="navigateTo('research-detail')">阅读报告</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Insights -->
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-6">研究洞察</h2>
+                <div class="glass-card p-8 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">RWA市场规模预测</h3>
+                            <div class="h-64 bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
+                                <p class="text-neutral-500">市场规模增长图表</p>
+                            </div>
+                            <p class="text-neutral-300">根据我们的研究，到2030年，全球代币化实物资产市场规模预计将达到16万亿美元，年复合增长率超过30%。</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">关键发展指标</h3>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-neutral-800 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-neutral-300">机构参与度</span>
+                                        <div class="w-1/2 bg-neutral-700 rounded-full h-2.5">
+                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                        <span class="text-blue-400 font-semibold">75%</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-neutral-800 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-neutral-300">监管成熟度</span>
+                                        <div class="w-1/2 bg-neutral-700 rounded-full h-2.5">
+                                            <div class="bg-purple-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                        </div>
+                                        <span class="text-purple-400 font-semibold">60%</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-neutral-800 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-neutral-300">技术成熟度</span>
+                                        <div class="w-1/2 bg-neutral-700 rounded-full h-2.5">
+                                            <div class="bg-green-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                        <span class="text-green-400 font-semibold">85%</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-neutral-800 rounded-lg">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-neutral-300">市场流动性</span>
+                                        <div class="w-1/2 bg-neutral-700 rounded-full h-2.5">
+                                            <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 45%"></div>
+                                        </div>
+                                        <span class="text-yellow-400 font-semibold">45%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Team -->
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-6">研究团队</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-lg text-center">
+                        <div class="w-24 h-24 rounded-full bg-neutral-700 mx-auto mb-4"></div>
+                        <h3 class="text-lg font-bold text-white">张博士</h3>
+                        <p class="text-blue-400 text-sm mb-2">首席研究员</p>
+                        <p class="text-neutral-400 text-sm">前华尔街分析师，专注于RWA市场研究和资产评估</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg text-center">
+                        <div class="w-24 h-24 rounded-full bg-neutral-700 mx-auto mb-4"></div>
+                        <h3 class="text-lg font-bold text-white">李教授</h3>
+                        <p class="text-purple-400 text-sm mb-2">技术研究员</p>
+                        <p class="text-neutral-400 text-sm">区块链技术专家，研究代币化技术和智能合约架构</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg text-center">
+                        <div class="w-24 h-24 rounded-full bg-neutral-700 mx-auto mb-4"></div>
+                        <h3 class="text-lg font-bold text-white">王分析师</h3>
+                        <p class="text-green-400 text-sm mb-2">市场分析师</p>
+                        <p class="text-neutral-400 text-sm">专注于市场趋势分析和投资策略研究</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg text-center">
+                        <div class="w-24 h-24 rounded-full bg-neutral-700 mx-auto mb-4"></div>
+                        <h3 class="text-lg font-bold text-white">陈顾问</h3>
+                        <p class="text-yellow-400 text-sm mb-2">法律顾问</p>
+                        <p class="text-neutral-400 text-sm">专注于区块链和金融科技领域的监管和合规研究</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="glass-card p-8 rounded-lg text-center">
+                <h2 class="text-2xl font-bold text-white mb-4">订阅研究报告</h2>
+                <p class="text-neutral-300 mb-6 max-w-2xl mx-auto">订阅我们的研究报告，获取最新的RWA市场分析、项目评估和投资策略。</p>
+                <div class="flex max-w-md mx-auto">
+                    <input type="email" placeholder="输入您的邮箱地址" class="flex-1 bg-neutral-800 border border-neutral-600 text-white rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button class="btn btn-primary rounded-l-none">订阅</button>
+                </div>
+            </div>
         </div>
     </template>
 
@@ -2597,7 +2808,7 @@
         // Global state
         let currentUser = null;
         let walletConnected = false;
-        let currentLanguage = 'en';
+        // Language is already defined globally
         
 
         const mainContent = document.getElementById('main-content');
