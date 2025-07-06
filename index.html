@@ -998,21 +998,21 @@
             <h2 class="text-2xl font-bold text-white mb-6">Participate in Investment</h2>
             <div id="investment-content">
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-neutral-300 mb-2">投资金额 (USDC)</label>
-                    <input type="number" id="investment-amount" class="w-full bg-neutral-800 border border-neutral-600 text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="最低 $500" min="500">
+                    <label class="block text-sm font-medium text-neutral-300 mb-2">Investment Amount (USDC)</label>
+                    <input type="number" id="investment-amount" class="w-full bg-neutral-800 border border-neutral-600 text-white rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Min. $500" min="500">
                 </div>
                 <div class="mb-4 p-4 bg-yellow-900/20 border border-yellow-600 rounded">
-                    <p class="text-yellow-400 text-sm">⚠️ 此投资需要完成 KYC 验证</p>
+                    <p class="text-yellow-400 text-sm">⚠️ This investment requires KYC verification</p>
                 </div>
                 <div class="mb-6">
                     <label class="flex items-center">
                         <input type="checkbox" id="terms-checkbox" class="mr-2">
-                        <span class="text-sm text-neutral-300">我已阅读并同意 <a href="#" class="text-blue-400 hover:underline">投资条款</a></span>
+                        <span class="text-sm text-neutral-300">I have read and agree to the <a href="#" class="text-blue-400 hover:underline">Investment Terms</a></span>
                     </label>
                 </div>
                 <div class="flex gap-4">
-                    <button type="button" onclick="closeModal('investment-modal')" class="btn btn-secondary flex-1">取消</button>
-                    <button type="button" onclick="proceedToKYC()" class="btn btn-primary flex-1" id="invest-btn" disabled>开始 KYC</button>
+                    <button type="button" onclick="closeModal('investment-modal')" class="btn btn-secondary flex-1">Cancel</button>
+                    <button type="button" onclick="proceedToKYC()" class="btn btn-primary flex-1" id="invest-btn" disabled>Start KYC</button>
                 </div>
             </div>
         </div>
@@ -1021,24 +1021,24 @@
     <!-- KYC Modal -->
     <div id="kyc-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
         <div class="glass-card p-8 rounded-lg max-w-lg w-full mx-4">
-            <h2 class="text-2xl font-bold text-white mb-6">KYC 身份验证</h2>
+            <h2 class="text-2xl font-bold text-white mb-6">KYC Identity Verification</h2>
             <div class="space-y-4">
                 <div class="flex items-center justify-between p-4 bg-neutral-800 rounded">
-                    <span class="text-white">1. 个人信息</span>
-                    <span class="text-green-400">✓ 已完成</span>
+                    <span class="text-white">1. Personal Information</span>
+                    <span class="text-green-400">✓ Completed</span>
                 </div>
                 <div class="flex items-center justify-between p-4 bg-neutral-800 rounded">
-                    <span class="text-white">2. 身份证件</span>
-                    <span class="text-yellow-400">进行中</span>
+                    <span class="text-white">2. Identity Document</span>
+                    <span class="text-yellow-400">In Progress</span>
                 </div>
                 <div class="flex items-center justify-between p-4 bg-neutral-700 rounded">
-                    <span class="text-neutral-400">3. 地址证明</span>
-                    <span class="text-neutral-500">待完成</span>
+                    <span class="text-neutral-400">3. Address Proof</span>
+                    <span class="text-neutral-500">Pending</span>
                 </div>
             </div>
             <div class="mt-6 flex gap-4">
-                <button type="button" onclick="closeModal('kyc-modal')" class="btn btn-secondary flex-1">稍后完成</button>
-                <button type="button" onclick="completeKYC()" class="btn btn-primary flex-1">继续验证</button>
+                <button type="button" onclick="closeModal('kyc-modal')" class="btn btn-secondary flex-1">Complete Later</button>
+                <button type="button" onclick="completeKYC()" class="btn btn-primary flex-1">Continue Verification</button>
             </div>
         </div>
     </div>
@@ -1046,7 +1046,7 @@
     <!-- Wallet Connection Modal -->
     <div id="wallet-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
         <div class="glass-card p-8 rounded-lg max-w-md w-full mx-4">
-            <h2 class="text-2xl font-bold text-white mb-6">连接钱包</h2>
+            <h2 class="text-2xl font-bold text-white mb-6">Connect Wallet</h2>
             <div class="space-y-4">
                 <button onclick="connectWallet('metamask')" class="w-full flex items-center gap-4 p-4 bg-neutral-800 hover:bg-neutral-700 rounded transition">
                     <img src="https://placehold.co/32x32/f6851b/ffffff?text=M" alt="MetaMask" class="w-8 h-8 rounded">
@@ -1062,7 +1062,7 @@
                 </button>
             </div>
             <div class="mt-6">
-                <button type="button" onclick="closeModal('wallet-modal')" class="btn btn-secondary w-full">取消</button>
+                <button type="button" onclick="closeModal('wallet-modal')" class="btn btn-secondary w-full">Cancel</button>
             </div>
         </div>
     </div>
@@ -1221,7 +1221,7 @@
         }
         
         function completeKYC() {
-            alert('KYC 验证完成！您现在可以参与投资。');
+            alert('KYC verification completed! You can now participate in investments.');
             closeModal('kyc-modal');
         }
         
@@ -1234,14 +1234,14 @@
                         walletConnected = true;
                         document.getElementById('connect-wallet-btn').textContent = `${accounts[0].slice(0, 6)}...${accounts[0].slice(-4)}`;
                         closeModal('wallet-modal');
-                        alert('钱包连接成功！');
+                        alert('Wallet connected successfully!');
                     }
                 } else {
-                    alert(`${walletType} 钱包连接功能正在开发中...`);
+                    alert(`${walletType} wallet connection is under development...`);
                 }
             } catch (error) {
                 console.error('Wallet connection failed:', error);
-                alert('钱包连接失败，请重试。');
+                alert('Wallet connection failed, please try again.');
             }
         }
         
@@ -1304,7 +1304,7 @@
                     currentUser = { email, name: email.split('@')[0] };
                     document.getElementById('login-btn').textContent = currentUser.name;
                     closeModal('login-modal');
-                    alert('登录成功！');
+                    alert('Login successful!');
                 }
             });
             
