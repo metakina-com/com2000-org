@@ -3,33 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Com2000 - RWA Data and Launchpad Platform</title>
-    <!-- 在开发环境中使用CDN，生产环境应该使用PostCSS插件 -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 生产环境推荐: https://tailwindcss.com/docs/installation -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- 移除 Lucide React，它需要 React 环境才能工作 -->
-    <!-- Web3 Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
-    <!-- i18n Support -->
-    <script src="https://cdn.jsdelivr.net/npm/i18next@21.9.1/dist/umd/i18next.min.js"></script>
+    <meta name="description" content="COM2000 - Professional RWA investment platform providing institutional-grade data analytics, project launchpad, and asset incubation services for digital asset allocation.">
+    <meta name="keywords" content="RWA, Real World Assets, institutional investment, digital assets, blockchain, DeFi, tokenization, asset management">
+    <meta name="author" content="COM2000">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://com2000.org/">
+    <meta property="og:title" content="COM2000 - Professional RWA Investment Platform">
+    <meta property="og:description" content="Institutional-grade RWA investment platform with advanced analytics and project incubation services.">
+    <meta property="og:image" content="https://com2000.org/assets/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://com2000.org/">
+    <meta property="twitter:title" content="COM2000 - Professional RWA Investment Platform">
+    <meta property="twitter:description" content="Institutional-grade RWA investment platform with advanced analytics and project incubation services.">
+    <meta property="twitter:image" content="https://com2000.org/assets/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <title>COM2000 - Professional RWA Investment Platform | Institutional Digital Assets</title>
+    <!-- Critical CSS inlined for faster rendering -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script>
+        // Configure Tailwind for better performance
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lazy load non-critical scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.9.1/dist/umd/i18next.min.js" defer></script>
     <style>
+        /* Critical CSS for above-the-fold content */
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #171717;
+            --text-primary: #f5f5f5;
+            --text-secondary: #a3a3a3;
+            --accent-blue: #2563eb;
+            --accent-green: #16a34a;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #f5f5f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Improve focus indicators for accessibility */
+        *:focus {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+        
+        /* Skip navigation for screen readers */
+        .skip-nav {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+        
+        .skip-nav:focus {
+            top: 6px;
         }
         .glass-card {
             background: rgba(23, 23, 23, 0.6);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            background: rgba(23, 23, 23, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .nav-link {
-            @apply text-neutral-300 hover:text-white transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium;
+            @apply text-neutral-300 hover:text-white transition-all duration-200 px-3 py-2 rounded-md text-sm font-medium;
+            min-height: 44px; /* Accessibility: minimum touch target size */
+            display: flex;
+            align-items: center;
         }
+        
         .nav-link.active {
             @apply bg-neutral-800 text-white;
+        }
+        
+        .nav-link:focus {
+            @apply ring-2 ring-blue-500 ring-offset-2 ring-offset-neutral-900;
         }
         .table-header {
             @apply text-xs text-neutral-400 uppercase tracking-wider text-left py-3 px-4;
@@ -39,12 +135,39 @@
         }
         .btn {
             @apply px-4 py-2 rounded-md font-semibold transition-all duration-200;
+            min-height: 44px; /* Accessibility: minimum touch target size */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
         }
+        
+        .btn:disabled {
+            @apply opacity-50 cursor-not-allowed;
+        }
+        
         .btn-primary {
             @apply bg-blue-600 text-white hover:bg-blue-500 shadow-md shadow-blue-600/20;
         }
+        
+        .btn-primary:hover:not(:disabled) {
+            @apply bg-blue-500 shadow-lg shadow-blue-600/30;
+            transform: translateY(-1px);
+        }
+        
         .btn-secondary {
             @apply bg-neutral-700 text-neutral-200 hover:bg-neutral-600;
+        }
+        
+        .btn-secondary:hover:not(:disabled) {
+            @apply bg-neutral-600;
+            transform: translateY(-1px);
+        }
+        
+        .btn-sm {
+            @apply px-3 py-1.5 text-sm;
+            min-height: 36px;
         }
         .tag {
             @apply text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full;
@@ -79,31 +202,113 @@
         .tag-cyan {
             @apply bg-cyan-900 text-cyan-300;
         }
+        
+        /* Loading states and animations */
+        .loading {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        /* Responsive table improvements */
+        @media (max-width: 768px) {
+            .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .table-cell {
+                white-space: nowrap;
+                min-width: 120px;
+            }
+            
+            .mobile-stack {
+                display: block !important;
+            }
+            
+            .mobile-stack .table-cell {
+                display: block;
+                text-align: left !important;
+                border: none;
+                padding: 8px 16px;
+            }
+            
+            .mobile-stack .table-cell:before {
+                content: attr(data-label) ': ';
+                font-weight: bold;
+                color: var(--text-secondary);
+            }
+        }
+        
+        /* Improved contrast for accessibility */
+        .high-contrast {
+            filter: contrast(1.2);
+        }
+        
+        /* Reduced motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-gradient-to-br from-neutral-900 to-neutral-800">
-
+    <!-- Skip navigation for accessibility -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    
     <!-- Header / Navigation Bar -->
-    <header class="glass-card sticky top-0 z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="glass-card sticky top-0 z-50" role="banner">
+        <!-- Structured data for SEO -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "COM2000",
+            "url": "https://com2000.org",
+            "description": "Professional RWA investment platform providing institutional-grade data analytics and project incubation services",
+            "sameAs": [
+                "https://twitter.com/com2000org",
+                "https://linkedin.com/company/com2000"
+            ]
+        }
+        </script>
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="#" onclick="navigateTo('home')" class="text-2xl font-bold text-white">Com2000</a>
+                        <a href="#" onclick="navigateTo('home')" class="text-2xl font-bold text-white" aria-label="COM2000 Home">COM2000</a>
                     </div>
                     <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-6">
-                            <a href="#" id="nav-home" class="nav-link" onclick="navigateTo('home')" data-i18n="nav.home">Home</a>
-                            <a href="#" id="nav-data" class="nav-link" onclick="navigateTo('data')" data-i18n="nav.data">Institutional Data Hub</a>
-                            <a href="#" id="nav-launchpad" class="nav-link" onclick="navigateTo('launchpad')" data-i18n="nav.launchpad">Project Launch</a>
-                            <a href="#" id="nav-incubator" class="nav-link" onclick="navigateTo('incubator')" data-i18n="nav.incubator">Asset Incubation</a>
-                            <a href="#" id="nav-research" class="nav-link" onclick="navigateTo('research')" data-i18n="nav.research">Research Reports</a>
-                            <a href="https://sites.google.com/view/com2000ipo/ipo" target="_blank" class="nav-link flex items-center space-x-1">
+                        <div class="ml-10 flex items-baseline space-x-6" role="menubar">
+                            <a href="#" id="nav-home" class="nav-link" onclick="navigateTo('home')" data-i18n="nav.home" role="menuitem" aria-current="page">Home</a>
+                            <a href="#" id="nav-data" class="nav-link" onclick="navigateTo('data')" data-i18n="nav.data" role="menuitem">Institutional Data Hub</a>
+                            <a href="#" id="nav-launchpad" class="nav-link" onclick="navigateTo('launchpad')" data-i18n="nav.launchpad" role="menuitem">Project Launch</a>
+                            <a href="#" id="nav-incubator" class="nav-link" onclick="navigateTo('incubator')" data-i18n="nav.incubator" role="menuitem">Asset Incubation</a>
+                            <a href="#" id="nav-research" class="nav-link" onclick="navigateTo('research')" data-i18n="nav.research" role="menuitem">Research Reports</a>
+                            <a href="https://sites.google.com/view/com2000ipo/ipo" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center space-x-1" role="menuitem" aria-label="IPO Status (opens in new window)">
                                 <span data-i18n="nav.ipo">IPO Status</span>
-                                <svg class="w-3 h-3 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-3 h-3 text-neutral-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                 </svg>
                             </a>
@@ -113,19 +318,21 @@
                 <div class="hidden md:block">
                     <div class="ml-4 flex items-center md:ml-6 space-x-4">
                         <div class="relative">
-                            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <label for="search-input" class="sr-only">Search projects</label>
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3" aria-hidden="true">
                                 <svg class="h-5 w-5 text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
                             </span>
-                            <input type="text" placeholder="Search projects..." class="bg-neutral-800 border border-neutral-700 text-white rounded-md py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                            <input type="search" id="search-input" placeholder="Search projects..." class="bg-neutral-800 border border-neutral-700 text-white rounded-md py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" aria-label="Search projects">
                         </div>
                         <!-- Language Selector -->
-                        <select id="language-selector" class="bg-neutral-800 text-white border border-neutral-600 rounded px-3 py-1 text-sm">
+                        <label for="language-selector" class="sr-only">Select language</label>
+                        <select id="language-selector" class="bg-neutral-800 text-white border border-neutral-600 rounded px-3 py-1 text-sm" aria-label="Language selection">
                             <option value="en" selected>English</option>
                             <option value="zh">中文</option>
                             <option value="zh-TW">繁體中文</option>
                         </select>
-                        <button id="connect-wallet-btn" class="btn btn-secondary" data-i18n="auth.connect_wallet">Institutional Wallet</button>
-                        <a href="#" id="login-btn" class="btn btn-primary" data-i18n="auth.login">Institutional Login</a>
+                        <button id="connect-wallet-btn" class="btn btn-secondary" data-i18n="auth.connect_wallet" aria-label="Connect institutional wallet">Institutional Wallet</button>
+                        <a href="#" id="login-btn" class="btn btn-primary" data-i18n="auth.login" role="button" aria-label="Institutional login">Institutional Login</a>
                     </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
