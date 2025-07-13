@@ -1,5 +1,5 @@
 name = "com2000-api"
-main = "src/index.ts"
+main = "src/index-simple.ts"
 compatibility_date = "2024-01-15"
 compatibility_flags = ["nodejs_compat"]
 
@@ -9,10 +9,10 @@ workers_dev = true
 # Workers AI
 ai = { binding = "AI" }
 
-# Analytics Engine
-analytics_engine_datasets = [
-  { binding = "ANALYTICS", dataset = "com2000_analytics" }
-]
+# Analytics Engine (disabled for initial deployment)
+# analytics_engine_datasets = [
+#   { binding = "ANALYTICS", dataset = "com2000_analytics" }
+# ]
 
 # KV Namespaces
 kv_namespaces = [
@@ -34,16 +34,16 @@ binding = "ASSETS"
 bucket_name = "com2000-assets"
 preview_bucket_name = "com2000-assets-preview"
 
-# Durable Objects
-[[durable_objects.bindings]]
-name = "PRICE_UPDATER"
-class_name = "PriceUpdater"
-script_name = "com2000-price-sync"
+# Durable Objects (disabled for initial deployment)
+# [[durable_objects.bindings]]
+# name = "PRICE_UPDATER"
+# class_name = "PriceUpdater"
+# script_name = "com2000-price-sync"
 
-[[durable_objects.bindings]]
-name = "PROJECT_SYNC"
-class_name = "ProjectSync"
-script_name = "com2000-project-sync"
+# [[durable_objects.bindings]]
+# name = "PROJECT_SYNC"
+# class_name = "ProjectSync"
+# script_name = "com2000-project-sync"
 
 # Environment Variables
 [vars]
@@ -58,14 +58,12 @@ SESSION_TIMEOUT = "3600"
 MAX_FILE_SIZE = "1048576"
 CACHE_TTL = "10"
 
-# Cron Triggers
-[triggers]
-crons = [
-  "0 */5 * * * *",  # Update prices every 5 minutes
-  "0 */15 * * * *", # Update trending projects every 15 minutes
-  "0 0 * * * *",   # Cleanup expired sessions every hour
-  "0 0 0 * * *"    # Generate daily reports at midnight
-]
+# Cron Triggers (disabled for initial deployment)
+# [triggers]
+# crons = [
+#   "*/5 * * * *",  # Every 5 minutes
+#   "0 0 * * *"     # Daily at midnight
+# ]
 
 # Staging Environment
 [env.staging]
@@ -149,9 +147,9 @@ bucket_name = "com2000-assets-production"
 preview_bucket_name = "com2000-assets-production-preview"
 
 # Build configuration
-[build]
-command = "npm run build"
-watch_dir = "src"
+# [build]
+# command = "npm run build"
+# watch_dir = "src"
 
 # Development configuration
 [dev]
@@ -167,10 +165,10 @@ upstream_protocol = "https"
 # r2_persist = true
 # cache_persist = true
 
-# Limits and quotas
-[limits]
-cpu_ms = 50
-memory_mb = 128
+# Limits and quotas (disabled for Free plan)
+# [limits]
+# cpu_ms = 50
+# memory_mb = 128
 
 # Placement configuration
 [placement]

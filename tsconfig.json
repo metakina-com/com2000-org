@@ -35,14 +35,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": false,
-    "types": [
-      "@cloudflare/workers-types",
-      "@types/node"
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules/@cloudflare"
-    ],
+    // "types": [
+    //   "@cloudflare/workers-types",
+    //   "@types/node"
+    // ],
+    // "typeRoots": [
+    //   "./node_modules/@types",
+    //   "./node_modules/@cloudflare"
+    // ],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
@@ -53,17 +53,19 @@
     }
   },
   "include": [
-    "src/**/*",
-    "migrations/**/*",
-    "*.ts",
-    "*.js"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "**/*.test.ts",
     "**/*.spec.ts",
-    "coverage"
+    "coverage",
+    "migrations",
+    "test",
+    "*.config.js",
+    "*.config.ts",
+    "test-project.js"
   ],
   "ts-node": {
     "esm": true,
