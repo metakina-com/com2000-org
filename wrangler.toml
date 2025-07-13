@@ -16,16 +16,16 @@ analytics_engine_datasets = [
 
 # KV Namespaces
 kv_namespaces = [
-  { binding = "SESSION_STORE", id = "user_sessions_kv", preview_id = "user_sessions_kv_preview" },
-  { binding = "PROJECT_CACHE", id = "project_cache_kv", preview_id = "project_cache_kv_preview" },
-  { binding = "RATE_LIMITER", id = "rate_limiter_kv", preview_id = "rate_limiter_kv_preview" }
+  { binding = "SESSION_STORE", id = "48373b1d7ee74ebfa08f472ae35b76c7", preview_id = "48373b1d7ee74ebfa08f472ae35b76c7" },
+  { binding = "PROJECT_CACHE", id = "f46cbe4170cc4287b60b994c795b24b6", preview_id = "f46cbe4170cc4287b60b994c795b24b6" },
+  { binding = "RATE_LIMITER", id = "a1c4de99e2014e54a95e143811dc1e36", preview_id = "a1c4de99e2014e54a95e143811dc1e36" }
 ]
 
 # D1 Databases
 [[d1_databases]]
 binding = "DB"
 database_name = "com2000-db"
-database_id = "com2000_db_id"
+database_id = "9a00518d-1d8c-4184-bf13-c037cd72117e"
 migrations_dir = "migrations"
 
 # R2 Buckets
@@ -161,11 +161,11 @@ local_protocol = "http"
 upstream_protocol = "https"
 
 # Miniflare configuration for local development
-[miniflare]
-kv_persist = true
-d1_persist = true
-r2_persist = true
-cache_persist = true
+# [miniflare]
+# kv_persist = true
+# d1_persist = true
+# r2_persist = true
+# cache_persist = true
 
 # Limits and quotas
 [limits]
